@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Welcome from "./Pages/Welcome"
 import Layout from './Pages/Layout'
 import CurrentWeather from './Pages/CurrentWeather'
+import Cities from './Pages/Cities'
+import Maps from './Pages/Maps'
+import Settings from './Pages/Settings'
+
 const rounter = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +21,19 @@ const rounter = createBrowserRouter([
       {
         path: "/main",
         element: <CurrentWeather />
-      }
+      },
+      {
+        path: "/main/city",
+        element: <Cities />
+      },
+      {
+        path: "/main/map",
+        element: <Maps />
+      },
+      {
+        path: "/main/setting",
+        element: <Settings />
+      },
     ]
   }
 ])
