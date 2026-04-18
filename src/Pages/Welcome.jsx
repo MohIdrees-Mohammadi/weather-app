@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
+import {useNavigate} from 'react-router-dom'
 const Welcome = () => {
+  const navigate = useNavigate();
   return (
     <div className='bg-primary h-screen text-gray-200 flex p-5'>
       {/* left side */}
@@ -15,7 +17,7 @@ const Welcome = () => {
           <h1 className='text-5xl lg:text-7xl font-bold'>Breeze</h1>
           <p className='text-2xl mt-3 text-center'>Weather App</p>
         </div>
-        <button className='bg-sky-500 h-15 w-15 lg:w-45 mt-10 flex justify-center items-center rounded-full lg:rounded-4xl lg:h-12 '>
+        <button onClick={()=> navigate("/main")} className='bg-sky-500 h-15 w-15 lg:w-45 mt-10 flex justify-center items-center rounded-full lg:rounded-4xl lg:h-12 '>
           <span className='hidden lg:block'>Get Started</span>
           <FaArrowRight className='lg:hidden text-4xl' />
         </button>
