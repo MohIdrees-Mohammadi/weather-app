@@ -1,77 +1,82 @@
-import React from 'react'
+import { FaUmbrella } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+import { SiRainyun } from "react-icons/si";
+import { TfiMenuAlt } from "react-icons/tfi";
+import { IoMap } from "react-icons/io5";
 import { TiWeatherPartlySunny } from "react-icons/ti";
-import { IoListSharp } from "react-icons/io5";
-import { FaMap } from "react-icons/fa";
-import { IoIosSettings } from "react-icons/io";
-import { NavLink } from 'react-router-dom';
+import { FaSliders } from "react-icons/fa6";
 const Header = () => {
     return (
-        <header className='bg-secondary text-gray-400 fixed lg:static bottom-0 lg:h-[98vh] flex lg:flex-col gap-5 p-3 lg:rounded w-screen lg:w-25'>
-            <span className='hidden lg:block'>logo</span>
-            <nav className=' w-screen lg:w-auto lg:mt-18 '>
-                <ul className='flex justify-around items-center  gap-15 lg:gap-10 w-full lg:flex-col '>
+        <>
+            <aside className="fixed bottom-0 right-0 left-0 flex lg:fixed lg:h-[98%] lg:top-2 lg:pt-3 lg:rounded-2xl bg-secondary lg:left-3.5 lg:bottom-2 lg:flex-col lg:gap-10 lg:w-17 items-center h-13 bg-darkBlue ">
+                <img className=" hidden lg:w-11.5 lg:h-11.5 lg:block  " src="https://assets.api.uizard.io/api/cdn/stream/d0bb0968-406e-4014-b9ab-080788e9d44b.png" alt="" />
+                <ul className="flex lg:flex-col lg:gap-5 w-full items-center  justify-evenly fill-gray-500 text-gray-500">
+                    <li>
+                        {/* Weather link */}
+                        <NavLink to={"/main"} end >
+                            {
+                                ({ isActive }) => (
+                                    <div className={isActive ? 'flex flex-col items-center justify-center font-bold text-gray-300' : 'flex flex-col items-center fill-gray-500 justify-center'}>
+                                        <SiRainyun className=" h-7 w-7 sm:h-5 sm:w-5" />
+                                        <span className="hidden text-[12px] sm:block">Weather</span>
+                                    </div>
+                                )
+                            }
+                        </NavLink>
+                    </li>
+                    <li>
+                        {/* City link */}
+                        <NavLink to={"/main/city"} end >
 
-                    {/* Weather link */}
-                    <NavLink to={"/main"} end >
-                        {
-                            ({ isActive }) => (
-                                <li className={isActive ? "flex justify-center items-center flex-col gap-2 text-gray-100 font-semibold" : 'flex justify-center items-center flex-col gap-2'}>
-                                    <TiWeatherPartlySunny className="size-9 lg:size-7.5" />
-                                    <span className="hidden text-md  lg:block">Weather</span>
-                                </li>
-                            )
-                        }
+                            {
+                                ({ isActive }) => (
+                                    <div className={isActive ? 'flex flex-col items-center justify-center font-bold text-gray-300' : 'flex flex-col items-center fill-gray-500 justify-center'}>
+                                        <TfiMenuAlt className=" h-8 w-7 sm:h-5 sm:w-5" />
+                                        <span className="hidden text-[12px] sm:block">Weather</span>
+                                    </div>
+                                )
+                            }
 
-                    </NavLink>
-
-                    {/* City link */}
-                    <NavLink to={"/main/city"} end >
-                        {
-                            ({ isActive }) => (
-                                <li className={isActive ? "flex justify-center items-center flex-col gap-2 text-gray-100 font-semibold" : 'flex justify-center items-center flex-col gap-2'}>
-                                    <IoListSharp className="size-10 lg:size-6.25" />
-                                    <span className="hidden text-md  lg:block">City</span>
-                                </li>
-                            )
-                        }
-
-                    </NavLink>
-
-                    {/* Map link */}
-                    <NavLink to={"/main/map"} end >
-                        {
-                            ({ isActive }) => (
-                                <li className={isActive ? "flex justify-center items-center flex-col gap-2 text-gray-100 font-semibold" : 'flex justify-center items-center flex-col gap-2'}>
-                                    <FaMap className="size-9 lg:size-7" />
-                                    <span className="hidden text-md  lg:block">Map</span>
-                                </li>
-                            )
-                        }
-
-                    </NavLink>
-
-                    {/* Setting link */}
-                    <NavLink to={"/main/setting"} end >
-                        {
-                            ({ isActive }) => (
-                                <li className={isActive ? "flex justify-center items-center flex-col gap-2 text-gray-100 font-semibold" : 'flex justify-center items-center flex-col gap-2'}>
-                                    <IoIosSettings className="size-11 lg:w-7.5" />
-                                    <span className="hidden text-md  lg:block">Settings</span>
-                                </li>
-                            )
-                        }
-
-                    </NavLink>
-
-
-
-
+                        </NavLink>
+                    </li>
+                    <li>
+                        {/* Map link */}
+                        <NavLink to={"/main/map"} end >
+                            {
+                                ({ isActive }) => (
+                                    <div className={isActive ? 'flex flex-col items-center justify-center font-bold text-gray-300' : 'flex flex-col items-center fill-gray-500 justify-center'}>
+                                        <IoMap className=" h-6 w-5 sm:h-5 sm:w-5" />
+                                        <span className="hidden text-[12px] sm:block">Weather</span>
+                                    </div>
+                                )
+                            }
+                        </NavLink>
+                    </li>
+                    <li>
+                        {/* Setting link */}
+                        <NavLink to={"/main/setting"} end >
+                            {
+                                ({ isActive }) => (
+                                    <div className={isActive ? 'flex flex-col items-center justify-center font-bold text-gray-300' : 'flex flex-col items-center fill-gray-500 justify-center'}>
+                                        <FaSliders className=" h-5.5 w-5.5 sm:h-5 sm:w-5" />
+                                        <span className="hidden text-[12px] sm:block">Weather</span>
+                                    </div>
+                                )
+                            }
+                        </NavLink>
+                    </li>
 
 
                 </ul>
-            </nav>
-        </header>
+
+            </aside>
+
+        </>
     )
 }
 
 export default Header
+
+
+
+
