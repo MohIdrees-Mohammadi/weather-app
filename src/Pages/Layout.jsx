@@ -4,9 +4,11 @@ import Header from '../components/Header'
 
 const Layout = () => {
   return (
-    <div className='flex gap-2.5 lg:p-3 bg-primary h-screen'>
+    <div>
       <Header />
-      <Outlet />
+      <div className='pb-15 lg:pb-1 lg:pl-22'>
+        <Outlet />
+      </div>
     </div>
   )
 }
