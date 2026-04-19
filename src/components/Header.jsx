@@ -10,7 +10,7 @@ const Header = () => {
         <>
             <aside className="fixed bottom-0 right-0 left-0 flex lg:fixed lg:h-[98%] lg:top-2 lg:pt-3 lg:rounded-2xl bg-secondary lg:left-3.5 lg:bottom-2 lg:flex-col lg:gap-10 lg:w-17 items-center h-13 bg-darkBlue ">
                 <img className=" hidden lg:w-11.5 lg:h-11.5 lg:block  " src="https://assets.api.uizard.io/api/cdn/stream/d0bb0968-406e-4014-b9ab-080788e9d44b.png" alt="" />
-                <ul className="flex lg:flex-col lg:gap-5 w-full items-center  justify-evenly fill-gray-500 text-gray-500">
+                <ul className="flex lg:flex-col lg:gap-7 w-full items-center  justify-evenly fill-gray-500 text-gray-500">
                     <li>
                         {/* Weather link */}
                         <NavLink to={"/main"} end >
@@ -32,7 +32,7 @@ const Header = () => {
                                 ({ isActive }) => (
                                     <div className={isActive ? 'flex flex-col items-center justify-center font-bold text-gray-300' : 'flex flex-col items-center fill-gray-500 justify-center'}>
                                         <TfiMenuAlt className=" h-8 w-7 sm:h-5 sm:w-5" />
-                                        <span className="hidden text-[12px] sm:block">Weather</span>
+                                        <span className="hidden text-[12px] sm:block">Cities</span>
                                     </div>
                                 )
                             }
@@ -46,7 +46,7 @@ const Header = () => {
                                 ({ isActive }) => (
                                     <div className={isActive ? 'flex flex-col items-center justify-center font-bold text-gray-300' : 'flex flex-col items-center fill-gray-500 justify-center'}>
                                         <IoMap className=" h-6 w-5 sm:h-5 sm:w-5" />
-                                        <span className="hidden text-[12px] sm:block">Weather</span>
+                                        <span className="hidden text-[12px] sm:block">Map</span>
                                     </div>
                                 )
                             }
@@ -59,7 +59,7 @@ const Header = () => {
                                 ({ isActive }) => (
                                     <div className={isActive ? 'flex flex-col items-center justify-center font-bold text-gray-300' : 'flex flex-col items-center fill-gray-500 justify-center'}>
                                         <FaSliders className=" h-5.5 w-5.5 sm:h-5 sm:w-5" />
-                                        <span className="hidden text-[12px] sm:block">Weather</span>
+                                        <span className="hidden text-[12px] sm:block">Setting</span>
                                     </div>
                                 )
                             }
