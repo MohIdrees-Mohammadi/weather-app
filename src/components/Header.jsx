@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <>
             <aside className="fixed bottom-0 right-0 left-0 flex lg:fixed lg:h-[98%] lg:top-2 lg:pt-3 lg:rounded-2xl bg-secondary lg:left-3.5 lg:bottom-2 lg:flex-col lg:gap-10 lg:w-17 items-center h-13 bg-darkBlue ">
-                <FaUmbrella className=" hidden lg:block sm:w-6 sm:h-6 fill-blue-500" />
+                <img className=" hidden lg:w-11.5 lg:h-11.5 lg:block  " src="https://assets.api.uizard.io/api/cdn/stream/d0bb0968-406e-4014-b9ab-080788e9d44b.png" alt="" />
                 <ul className="flex lg:flex-col lg:gap-5 w-full items-center  justify-evenly fill-gray-500 text-gray-500">
                     <li>
                         {/* Weather link */}
