@@ -41,7 +41,7 @@ const MobileCurrentWeather = () => {
 
 
     return (
-        <section className='flex flex-col justify-center items-center bg-primary w-screen'>
+        <section className='flex flex-col justify-center items-center gap-2.5 bg-primary w-screen'>
             <div className='flex flex-col justify-center items-center'>
                 <h1 className='text-4xl font-bold mt-10'>Kabul</h1>
                 <p className='mt-2 text-md text-gray-500'>Chance of rain: 0%</p>
@@ -76,53 +76,71 @@ const MobileCurrentWeather = () => {
 
 
             {/* Wasi */}
-            <div className='flex flex-col mt-3 bg-secondary rounded-2xl p-5 w-[90%]'>
+            <div className='lg:ml-6  bg-secondary lg:mt-17.5 text-gray-400 rounded-2xl mx-auto w-[90%] lg:h-[86.5vh] p-4 h-105 lg:w-[35%] lg:block'>
 
-                <h2 className='text-gray-500 font-semibold self-start mb-3'>7-days forecast</h2>
-                <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
-                    <h2 className='font-bold text-gray-400'>Today</h2>
-                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
-                        <h2 className='font-bold'>Sunny</h2></div>
-                    <h2 className='font-bold'>36/22</h2>
-                </div>
-                <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
-                    <h2 className='font-bold text-gray-400'>Sat</h2>
-                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
-                        <h2 className='font-bold'>Sunny</h2></div>
-                    <h2 className='font-bold'>36/22</h2>
-                </div>
-                <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
-                    <h2 className='font-bold text-gray-400'>Sun</h2>
-                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
-                        <h2 className='font-bold'>Sunny</h2></div>
-                    <h2 className='font-bold'>36/22</h2>
-                </div>
-                <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
-                    <h2 className='font-bold text-gray-400'>Mon</h2>
-                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
-                        <h2 className='font-bold'>Sunny</h2></div>
-                    <h2 className='font-bold'>36/22</h2>
-                </div>
-                <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
-                    <h2 className='font-bold text-gray-400'>Tue</h2>
-                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
-                        <h2 className='font-bold'>Sunny</h2></div>
-                    <h2 className='font-bold'>36/22</h2>
-                </div>
-                <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
-                    <h2 className='font-bold text-gray-400'>Wed</h2>
-                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
-                        <h2 className='font-bold'>Sunny</h2></div>
-                    <h2 className='font-bold'>36/22</h2>
-                </div>
-                <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
-                    <h2 className='font-bold text-gray-400'>Thu</h2>
-                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
-                        <h2 className='font-bold'>Sunny</h2></div>
-                    <h2 className='font-bold'>36/22</h2>
-                </div>
-
+  
+          <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
+          <div className='grid grid-row-7 h-full'>
+            <div className='grid grid-cols-3 w-full items-center justify-center border-b border-gray-500/30 '>
+              <span>Saturday</span>
+              <div className='flex gap-3 items-center justify-center'>
+                <img src={sun} alt='weather image' className='w-9 h-9 md:h-auto md:w-10.5 lg:w-12 lg:h-12 fill-yellow-300' />
+                <span className='font-bold'>Sunny</span>
+              </div>
+              <span className='text-right'>20°</span>
             </div>
+            <div className='grid grid-cols-3 w-full items-center justify-center border-b border-gray-500/30 '>
+              <span>Sunday</span>
+              <div className='flex gap-3 items-center justify-center'>
+                <img src={sun} alt='weather image' className='w-9 h-9 md:h-auto md:w-10.5 lg:w-12 lg:h-12 fill-yellow-300' />
+                <span className='font-bold'>Sunny</span>
+              </div>
+              <span className='text-right'>20°</span>
+            </div>
+            <div className='grid grid-cols-3 w-full items-center justify-center border-b border-gray-500/30 '>
+              <span>Monday</span>
+              <div className='flex gap-3 items-center justify-center'>
+                <img src={sun} alt='weather image' className='w-9 h-9 md:h-auto md:w-10.5 lg:w-12 lg:h-12 fill-yellow-300' />
+                <span className='font-bold'>Sunny</span>
+              </div>
+              <span className='text-right'>20°</span>
+            </div>
+            <div className='grid grid-cols-3 w-full items-center justify-center border-b border-gray-500/30 '>
+              <span>Tuesday</span>
+              <div className='flex gap-3 items-center justify-center'>
+                <img src={sun} alt='weather image' className='w-9 h-9 md:h-auto md:w-10.5 lg:w-12 lg:h-12 fill-yellow-300' />
+                <span className='font-bold'>Sunny</span>
+              </div>
+              <span className='text-right'>20°</span>
+            </div>
+            <div className='grid grid-cols-3 w-full items-center justify-center border-b border-gray-500/30 '>
+              <span>Wednsday</span>
+              <div className='flex gap-3 items-center justify-center'>
+                <img src={sun} alt='weather image' className='w-9 h-9 md:h-auto md:w-10.5 lg:w-12 lg:h-12 fill-yellow-300' />
+                <span className='font-bold'>Sunny</span>
+              </div>
+              <span className='text-right'>20°</span>
+            </div>
+            <div className='grid grid-cols-3 w-full items-center justify-center border-b border-gray-500/30 '>
+              <span>Tursday</span>
+              <div className='flex gap-3 items-center justify-center'>
+                <img src={sun} alt='weather image' className='w-9 h-9 md:h-auto md:w-10.5 lg:w-12 lg:h-12 fill-yellow-300' />
+                <span className='font-bold'>Sunny</span>
+              </div>
+              <span className='text-right'>20°</span>
+            </div>
+            <div className='grid grid-cols-3 w-full items-center justify-center  '>
+              <span>Friday</span>
+              <div className='flex gap-3 items-center justify-center'>
+                <img src={sun} alt='weather image' className='w-9 h-9 md:h-auto md:w-10.5 lg:w-12 lg:h-12 fill-yellow-300' />
+                <span className='font-bold'>Sunny</span>
+              </div>
+              <span className='text-right'>20°</span>
+            </div>
+            
+          </div>
+
+      </div>
 
             {/* Ahmad Shah Gouhari */}
             <div className=' w-[90%] bg-secondary rounded-2xl p-5 h-auto mt-3'>
