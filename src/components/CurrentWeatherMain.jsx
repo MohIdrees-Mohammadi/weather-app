@@ -14,11 +14,11 @@ const CurrentWeatherMain = () => {
 
         // {/* PC */}
 
-        <section>
+        <section className='ml-5'>
             {/* top */}
-            <div className='main1-head '>
-                <input className='search_input hidden lg:block w-full h-8   p-2.5 bg-secondary rounded-lg outline-none' type="text" placeholder='Search for cities' />
-                <div className='flex justify-between   pt-8 px-15'>
+            <div className=''>
+                
+                <div className='flex justify-between  pt-8 px-15'>
                     <div className='flex flex-col gap-7'>
                         <div className='flex flex-col gap-4'>
                             <h1 className='text-4xl font-bold'>Kabul</h1>

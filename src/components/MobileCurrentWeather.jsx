@@ -9,9 +9,39 @@ import cloud from "../assets/cloud.png"
 import sun from "../assets/sunny.png"
 import cloudy from "../assets/cloudy.png"
 
+
+
+const weatherDetail = [
+    {
+        id: 1,
+        icon: cloudy,
+        temp: "20°",
+        time: "6:00 AM"
+    },
+    {
+        id: 2,
+        icon: cloudy,
+        temp: "20°",
+        time: "9:00 AM"
+    },
+    {
+        id: 3,
+        icon: cloudy,
+        temp: "21°",
+        time: "12:00 PM"
+    }
+]
+
+
+
 const MobileCurrentWeather = () => {
+
+
+
+
+
     return (
-<section className='flex flex-col justify-center items-center bg-primary w-screen'>
+        <section className='flex flex-col justify-center items-center bg-primary w-screen'>
             <div className='flex flex-col justify-center items-center'>
                 <h1 className='text-4xl font-bold mt-10'>Kabul</h1>
                 <p className='mt-2 text-md text-gray-500'>Chance of rain: 0%</p>
@@ -29,23 +59,17 @@ const MobileCurrentWeather = () => {
 
                 <h5 className='font-medium  text-gray-500'>TODAY'S FORECAST</h5>
                 <div className='flex justify-between'>
-                    <div className='flex justify-between'>
-                        <div className='flex flex-col gap-3 items-center border-r-gray-700  border-r px-6'>
-                            <p className='font-semibold'>6:00 AM</p>
-                            <img src={cloud} alt="cloud" className='w-auto h=auto' />
-                            <h2 className='font-bold'>25°</h2>
-                        </div>
-                    </div>
-                    <div className='flex flex-col gap-3 items-center  border-r-gray-700 border-r px-6'>
-                        <p className='font-semibold'>9:00 AM</p>
-                            <img src={cloud} alt="cloud" className='w-auto h=auto' />
-                        <h2 className='font-bold'>28°</h2>
-                    </div>
-                    <div className='flex flex-col gap-3 items-center  border-r-gray-700   px-6'>
-                        <p className='font-semibold'>12:00 PM </p>
-                            <img src={cloud} alt="cloud" className='w-auto h=auto' />
-                        <h2 className='font-bold'>33°</h2>
-                    </div>
+
+                    {
+                        weatherDetail.map((item) => (
+                            <div key={item.id} className='flex flex-col gap-3 items-center border-r-gray-700  border-r px-6'>
+                                <p className='font-semibold text-[13px]'>{item.time}</p>
+                                <img src={item.icon} alt="cloud" className='w-auto h=auto' />
+                                <h2 className='font-bold'>{item.temp}</h2>
+                            </div>
+                        ))
+                    }
+
                 </div>
 
             </div>

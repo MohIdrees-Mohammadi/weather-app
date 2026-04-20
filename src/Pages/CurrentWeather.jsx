@@ -9,16 +9,16 @@ const CurrentWeather = () => {
   const rainy = 'https://assets.api.uizard.io/api/cdn/stream/d12bc406-1c84-42b5-9f37-4d52460d0521.png'
   return (
 
-    <section className='text-gray-300 lg:gap-1 w-screen lg:flex '>
-      {/* Ahmad Shah Gouhari */}
+    <section className='text-gray-300 lg:gap-1 w-full  lg:flex  pb-30 lg:pb-0 bg-primary '>
+      {/* Desktop Layout - Ahmad Shah Gouhari */}
       <div className='lg:w-[60%] ml-3 hidden lg:block '> <CurrentWeatherMain /> </div>
 
-      {/* Mobile */}
+      {/* Mobile Layout -- */}
       <div className='lg:w-[40%] block lg:hidden '> <MobileCurrentWeather /> </div>
 
 
       {/*WASI */}
-      <div className='lg:w-[31%] lg:block bg-secondary lg:mt-17.5 text-gray-400 rounded-2xl hidden lg:h-full  p-4 gap-2.5 '>
+       <div className='ml-6 lg:w-[35%] lg:block bg-secondary lg:mt-17.5 text-gray-400 rounded-2xl hidden lg:h-[86.5vh] p-4 gap-2.5 '>
 
   
           <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
@@ -83,7 +83,7 @@ const CurrentWeather = () => {
             
           </div>
 
-      </div>
+      </div> 
 
 
     </section>
