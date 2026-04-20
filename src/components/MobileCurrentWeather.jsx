@@ -5,16 +5,19 @@ import { BsThermometerSun } from "react-icons/bs";
 import { LuWind } from "react-icons/lu";
 import { WiHumidity } from "react-icons/wi";
 import { TbUvIndex } from "react-icons/tb";
+import cloud from "../assets/cloud.png"
+import sun from "../assets/sunny.png"
+import cloudy from "../assets/cloudy.png"
 
 const MobileCurrentWeather = () => {
     return (
-<section className='flex flex-col justify-center items-center bg-primary w-screen h-[65vh]'>
+<section className='flex flex-col justify-center items-center bg-primary w-screen'>
             <div className='flex flex-col justify-center items-center'>
                 <h1 className='text-4xl font-bold mt-10'>Kabul</h1>
                 <p className='mt-2 text-md text-gray-500'>Chance of rain: 0%</p>
 
                 <div className='mt-10 flex justify-center items-center'>
-                    <FaCircle className='fill-yellow-300 text-9xl shadow-lg  inset-2.5' />
+                    < img className='w-[50%]' src={sun} alt="Sunny" />
                 </div>
 
                 <div className='flex justify-center items-center mt-8'>
@@ -29,18 +32,18 @@ const MobileCurrentWeather = () => {
                     <div className='flex justify-between'>
                         <div className='flex flex-col gap-3 items-center border-r-gray-700  border-r px-6'>
                             <p className='font-semibold'>6:00 AM</p>
-                            <IoCloudy className='text-5xl' />
+                            <img src={cloud} alt="cloud" className='w-auto h=auto' />
                             <h2 className='font-bold'>25°</h2>
                         </div>
                     </div>
                     <div className='flex flex-col gap-3 items-center  border-r-gray-700 border-r px-6'>
                         <p className='font-semibold'>9:00 AM</p>
-                        <FaCircle className='text-5xl text-amber-300' />
+                            <img src={cloud} alt="cloud" className='w-auto h=auto' />
                         <h2 className='font-bold'>28°</h2>
                     </div>
                     <div className='flex flex-col gap-3 items-center  border-r-gray-700   px-6'>
                         <p className='font-semibold'>12:00 PM </p>
-                        <FaCircle className='text-5xl text-amber-300' />
+                            <img src={cloud} alt="cloud" className='w-auto h=auto' />
                         <h2 className='font-bold'>33°</h2>
                     </div>
                 </div>
@@ -54,43 +57,43 @@ const MobileCurrentWeather = () => {
                 <h2 className='text-gray-500 font-semibold self-start mb-3'>7-days forecast</h2>
                 <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
                     <h2 className='font-bold text-gray-400'>Today</h2>
-                    <div className='flex gap-3'><FaCircle className='text-3xl text-amber-300' />
+                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
                         <h2 className='font-bold'>Sunny</h2></div>
                     <h2 className='font-bold'>36/22</h2>
                 </div>
                 <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
                     <h2 className='font-bold text-gray-400'>Sat</h2>
-                    <div className='flex gap-3'><FaCircle className='text-3xl text-amber-300' />
+                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
                         <h2 className='font-bold'>Sunny</h2></div>
                     <h2 className='font-bold'>36/22</h2>
                 </div>
                 <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
                     <h2 className='font-bold text-gray-400'>Sun</h2>
-                    <div className='flex gap-3'><FaCircle className='text-3xl text-amber-300' />
+                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
                         <h2 className='font-bold'>Sunny</h2></div>
                     <h2 className='font-bold'>36/22</h2>
                 </div>
                 <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
                     <h2 className='font-bold text-gray-400'>Mon</h2>
-                    <div className='flex gap-3'><FaCircle className='text-3xl text-amber-300' />
+                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
                         <h2 className='font-bold'>Sunny</h2></div>
                     <h2 className='font-bold'>36/22</h2>
                 </div>
                 <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
                     <h2 className='font-bold text-gray-400'>Tue</h2>
-                    <div className='flex gap-3'><FaCircle className='text-3xl text-amber-300' />
+                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
                         <h2 className='font-bold'>Sunny</h2></div>
                     <h2 className='font-bold'>36/22</h2>
                 </div>
                 <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
                     <h2 className='font-bold text-gray-400'>Wed</h2>
-                    <div className='flex gap-3'><FaCircle className='text-3xl text-amber-300' />
+                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
                         <h2 className='font-bold'>Sunny</h2></div>
                     <h2 className='font-bold'>36/22</h2>
                 </div>
                 <div className='flex gap-3 justify-between border-b-gray-700 border-b pb-3 mt-2 '>
                     <h2 className='font-bold text-gray-400'>Thu</h2>
-                    <div className='flex gap-3'><FaCircle className='text-3xl text-amber-300' />
+                    <div className='flex gap-3'> <img src={sun} alt="sunny" className='w-11' />
                         <h2 className='font-bold'>Sunny</h2></div>
                     <h2 className='font-bold'>36/22</h2>
                 </div>

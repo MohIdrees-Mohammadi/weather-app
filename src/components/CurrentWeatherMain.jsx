@@ -5,7 +5,9 @@ import { BsThermometerSun } from "react-icons/bs";
 import { LuWind } from "react-icons/lu";
 import { WiHumidity } from "react-icons/wi";
 import { TbUvIndex } from "react-icons/tb";
-
+import cloud from "../assets/cloud.png"
+import sun from "../assets/sunny.png"
+import cloudy from "../assets/cloudy.png"
 
 const CurrentWeatherMain = () => {
     return (
@@ -27,7 +29,7 @@ const CurrentWeatherMain = () => {
                         </div>
                     </div>
                     <div className='mr-8'>
-                        <FaCircle className='fill-yellow-300 text-9xl shadow-lg  inset-2.5' />
+                            <img src={sun} alt="cloud" className='w-50 h=auto' />
                     </div>
                 </div>
             </div>
@@ -40,33 +42,33 @@ const CurrentWeatherMain = () => {
                 <div className='flex justify-between'>
                     <div className='flex flex-col gap-3 items-center border-r-gray-700  border-r px-6'>
                         <p className='font-semibold'>6:00 AM</p>
-                        <IoCloudy className='text-5xl' />
+                            <img src={cloud} alt="cloud"  className='w-auto h=auto' />
                         <h2 className='font-bold'>25°</h2>
                     </div>
                     <div className='flex flex-col gap-3 items-center  border-r-gray-700 border-r px-6'>
                         <p className='font-semibold'>9:00 AM</p>
-                        <FaCircle className='text-5xl text-amber-300' />
+                            <img src={sun} alt="cloud" className='w-auto h=auto' />
                         <h2 className='font-bold'>28°</h2>
                     </div>
                     <div className='flex flex-col gap-3 items-center  border-r-gray-700  border-r px-6'>
                         <p className='font-semibold'>12:00 PM </p>
-                        <FaCircle className='text-5xl text-amber-300' />
+                            <img src={sun} alt="cloud" className='w-auto h=auto' />
                         <h2 className='font-bold'>33°</h2>
                     </div>
                     <div className='flex flex-col gap-3 items-center  border-r-gray-700  border-r px-6'>
                         <p className='font-semibold'>3:00 PM</p>
-                        <FaCircle className='text-5xl text-amber-300' />
+                            <img src={cloudy} alt="cloud" className='w-auto h=auto' />
                         <h2 className='font-bold'>34°</h2>
                     </div>
 
                     <div className='flex flex-col gap-3 items-center  border-r-gray-700  border-r px-6 '>
                         <p className='font-semibold'>6:00 PM</p>
-                        <FaCircle className='text-5xl text-amber-300' />
+                            <img src={cloudy} alt="cloud" className='w-auto h=auto' />
                         <h2 className='font-bold'>28°</h2>
                     </div>
                     <div className='flex flex-col gap-3 items-center '>
                         <p className='font-semibold'>9:00 PM</p>
-                        <FaCircle className='text-5xl text-amber-300' />
+                            <img src={sun} alt="cloud" className='w-auto h=auto' />
                         <h2 className='font-bold'>28°</h2>
                     </div>
                 </div>
