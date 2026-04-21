@@ -18,7 +18,8 @@ const CurrentWeather = () => {
 
 
       {/*WASI */}
-       <div className='ml-6  bg-secondary lg:mt-11 text-gray-400 rounded-2xl hidden lg:h-[86.5vh] p-4 gap-2.5 lg:w-[35%] lg:block'>
+       <section className='flex justify-end  lg:w-[35%] '>
+        <div className='ml-6  bg-secondary lg:mt-11 text-gray-400 rounded-2xl hidden lg:h-[86.5vh] lg:w-[80%] p-4 gap-2.5 lg:block'>
 
   
           <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
@@ -83,6 +84,7 @@ const CurrentWeather = () => {
           </div>
 
       </div> 
+       </section>
 
 
     </section>

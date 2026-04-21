@@ -1,7 +1,8 @@
 import React from 'react'
 
 
-function CityCard({ name, time, temp, icon }) {
+function CityCard({name, time, temp, icon} ) {
+  
   return (
     <div className="flex items-center justify-between w-2xl bg-secondary hover:bg-[#26374a] transition-all duration-300 p-3 rounded-2xl mb-3 cursor-pointer hover:-translate-y-1">
       

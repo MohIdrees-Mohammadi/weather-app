@@ -51,10 +51,21 @@ const weatherDetail = [
     }
 ]
 const CurrentWeatherMain = () => {
+    const [toggle, setToggle] = React.useState(true)
+
+    const handleToggle = () =>{
+        setToggle(!toggle)
+    }
+
+
+
     return (
         <section className='ml-5 space-y-3 pr-3 pb-4'>
             {/* top */}
-            <div className='px-6 pt-6 xl:px-10'>
+            {
+
+                toggle ? (
+                <div className='px-6 pt-6 xl:px-10'>
                 <div className='flex items-start justify-between gap-6'>
                     <div className='flex flex-col gap-6'>
                         <div className='flex flex-col gap-2'>
@@ -70,10 +81,16 @@ const CurrentWeatherMain = () => {
                         <img src={sun} alt="sun" className='h-auto w-32 xl:w-36' />
                     </div>
                 </div>
-            </div>
+                </div>
+            ): (<h1 onClick={handleToggle}>Detail Section</h1>)
+
+
+            }
 
             {/* middle */}
-            <div className=' flex w-full flex-col gap-4 rounded-4xl bg-secondary  p-4 xl:p-5 mt-7 '>
+            {
+                toggle ? (
+                    <div className=' flex w-full flex-col gap-4 rounded-4xl bg-secondary  p-4 xl:p-5 mt-7 '>
                 <h5 className='text-sm font-medium tracking-wide text-gray-500'>TODAY'S FORECAST</h5>
 
             <div className='grid grid-cols-6 items-center gap-3  '>
@@ -86,13 +103,17 @@ const CurrentWeatherMain = () => {
                 ))}
                 </div>
 
-            </div>
+                     </div>
+                ) : (<h1>Detail Section</h1>)
+            }
 
             {/* down */}
-            <div className='main3 flex w-full flex-col gap-3 rounded-4xl bg-secondary p-4'>
+            {
+                toggle ? (
+                    <div className='main3 flex w-full flex-col gap-3 rounded-4xl bg-secondary p-4'>
                 <div className='flex items-center justify-between h-auto'>
                     <h4 className='text-md font-semibold tracking-wide text-gray-500'>AIR CONDATIONS</h4>
-                    <button className='h-8 rounded-full bg-sky-400 px-4 text-xs font-medium text-white hover:bg-sky-700 xl:text-sm'>
+                    <button onClick={handleToggle}  className='h-8 rounded-full bg-sky-400 px-4 text-xs font-medium text-white hover:bg-sky-700 xl:text-sm'>
                         See More
                     </button>
                 </div>
@@ -133,6 +154,8 @@ const CurrentWeatherMain = () => {
                     </div>
                 </div>
             </div>
+                ) : (<h1>Detail Section</h1>)
+            }
         </section>
     )
 }
