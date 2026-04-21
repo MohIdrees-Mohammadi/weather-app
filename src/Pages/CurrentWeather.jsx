@@ -1,6 +1,6 @@
 import React from 'react'
-import CurrentWeatherMain from '../components/CurrentWeatherMain'
-import MobileCurrentWeather from '../components/MobileCurrentWeather'
+import PcWeather from '../components/PcWeather'
+import MobileWeather from '../components/MobileWeather'
 
 const CurrentWeather = () => {
   const sun = 'https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png'
@@ -9,12 +9,12 @@ const CurrentWeather = () => {
   const rainy = 'https://assets.api.uizard.io/api/cdn/stream/d12bc406-1c84-42b5-9f37-4d52460d0521.png'
   return (
 
-    <section className='text-gray-300 lg:gap-1 w-full  lg:flex  pb-30 lg:pb-0 bg-primary '>
-      {/* Desktop Layout - Ahmad Shah Gouhari */}
-      <div className='lg:w-[60%] ml-3 hidden lg:block '> <CurrentWeatherMain /> </div>
+    <section className='text-gray-300 lg:gap-1 w-full   lg:flex  pb-30 lg:pb-0 bg-primary '>
+      {/* Desktop Layout -- */}
+      <div className='lg:w-[60%] ml-3 hidden lg:block '> <PcWeather /> </div>
 
       {/* Mobile Layout -- */}
-      <div className='lg:w-[40%] block lg:hidden '> <MobileCurrentWeather /> </div>
+      <div className='lg:w-[40%] block lg:hidden '> <MobileWeather /> </div>
 
 
       {/*WASI */}

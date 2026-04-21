@@ -10,24 +10,24 @@ const weatherDetail = [
     {
         id: 1,
         icon: cloudy,
-        temp: "20° ",
+        temp: "20Â° ",
         time: "6:00 AM"
     },
     {
         id: 2,
         icon: cloudy,
-        temp: "20°",
+        temp: "20Â°",
         time: "9:00 AM"
     },
     {
         id: 3,
         icon: cloudy,
-        temp: "21°",
+        temp: "21Â°",
         time: "12:00 PM"
     }
 ]
 
-const MobileCurrentWeather = () => {
+const MobileWeather = () => {
     return (
         <section className='flex w-full flex-col items-center gap-3 bg-primary px-4 pb-6'>
             <div className='flex w-full max-w-md flex-col items-center pt-10'>
@@ -179,4 +179,4 @@ const MobileCurrentWeather = () => {
     )
 }
 
-export default MobileCurrentWeather
+export default MobileWeather
