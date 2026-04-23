@@ -77,8 +77,12 @@ function Cities() {
             <p className='text-xl text-gray-400'>chance of rain</p>
             <span className='hidden lg:block mt-2.5 text-7xl font-bold'>31°</span>
           </div>
-          <MdSunny  className='text-center ml-35  text-[350px] lg:text-9xl mt-3.75  text-yellow-400 lg:mr-12.5' />
-          <span className='lg:hidden ml-[45%] text-6xl font-bold pt-2.5'>31</span>
+          <MdSunny  className='hidden lg:block text-center ml-35  text-[350px] lg:text-9xl mt-3.75  text-yellow-400 lg:mr-12.5' />
+          <div className='flex flex-col justify-center items-center w-full lg:hidden'>
+          <MdSunny  className='text-center   text-7xl lg:text-9xl mt-3.75  text-yellow-400 lg:mr-12.5' />
+          <span className='lg:hidden  text-6xl font-bold pt-2.5'>31°</span>
+
+          </div>
         </div>
         {/* Second section */}
         <div className='w-full h-[35%] text-gray-300 p-2.5  border-t border-gray-700 border-b mt-25 lg:mt-5'>
