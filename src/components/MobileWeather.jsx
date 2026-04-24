@@ -10,19 +10,19 @@ const weatherDetail = [
     {
         id: 1,
         icon: cloudy,
-        temp: "20Â° ",
+        temp: "20° ",
         time: "6:00 AM"
     },
     {
         id: 2,
         icon: cloudy,
-        temp: "20Â°",
+        temp: "20°",
         time: "9:00 AM"
     },
     {
         id: 3,
         icon: cloudy,
-        temp: "21Â°",
+        temp: "21°",
         time: "12:00 PM"
     }
 ]
@@ -52,7 +52,7 @@ const MobileWeather = () => {
                             key={item.id}
                             className='flex min-w-0 flex-1 flex-col items-center gap-3 border-r border-r-gray-700 px-2 text-center last:border-r-0'
                         >
-                            <p className='text-[13px] font-semibold'>{item.time}</p>
+                            <p className='text-xs font-semibold'>{item.time}</p>
                             <img src={item.icon} alt="cloudy" className='h-10 w-auto' />
                             <h2 className='font-bold'>{item.temp}</h2>
                         </div>
@@ -140,7 +140,7 @@ const MobileWeather = () => {
                 </div>
 
                 <div className='mt-4 flex justify-between gap-4'>
-                    <div className='flex w-[48%] flex-col gap-2'>
+                    <div className='flex w-1/2 flex-col gap-2'>
                         <div className='flex items-center gap-2 text-gray-400'>
                             <BsThermometerSun className='text-xl' />
                             <h3 className='text-base'>Real Feel</h3>
@@ -148,7 +148,7 @@ const MobileWeather = () => {
                         <h2 className='pl-7 text-xl font-bold text-gray-200'>25{"\u00B0"}C</h2>
                     </div>
 
-                    <div className='flex w-[48%] flex-col gap-2'>
+                    <div className='flex w-1/2 flex-col gap-2'>
                         <div className='flex items-center gap-2 text-gray-400'>
                             <LuWind className='text-xl' />
                             <h3 className='text-base'>Wind</h3>
@@ -158,7 +158,7 @@ const MobileWeather = () => {
                 </div>
 
                 <div className='mt-4 flex justify-between gap-4'>
-                    <div className='flex w-[48%] flex-col gap-2'>
+                    <div className='flex w-1/2 flex-col gap-2'>
                         <div className='flex items-center gap-2 text-gray-400'>
                             <WiHumidity className='text-xl' />
                             <h3 className='text-base'>Humidity</h3>
@@ -166,7 +166,7 @@ const MobileWeather = () => {
                         <h2 className='pl-7 text-xl font-bold text-gray-200'>25%</h2>
                     </div>
 
-                    <div className='flex w-[48%] flex-col gap-2'>
+                    <div className='flex w-1/2 flex-col gap-2'>
                         <div className='flex items-center gap-2 text-gray-400'>
                             <TbUvIndex className='text-xl' />
                             <h3 className='text-base'>UV Index</h3>

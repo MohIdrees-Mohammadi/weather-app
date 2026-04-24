@@ -5,11 +5,22 @@ import Header from '../components/Header'
 
 const Layout = () => {
   return (
-    <div >
+    <div className='min-h-screen bg-primary lg:h-screen lg:overflow-hidden'>
       <Header />
-      <input type="text" placeholder='Search For Cities' className='ml-5 bg-secondary  absolute left-5 right-5 top-3 lg:top-2.5 lg:right-183 lg:left-22  text-gray-200  rounded-xl  justify-center px-2 py-3 ' />
-      <div className=' pb-15 lg:pb-1 lg:pl-22 pt-15 bg-primary h-screen w-screen lg:pt-12'>
-        <Outlet />
+
+      
+      <div className='min-h-screen bg-primary pb-15 pt-3 lg:pl-22 lg:pr-4 lg:pt-2 lg:pb-1 lg:h-full '>
+
+        <div className='mx-5 flex h-full flex-col gap-4 lg:mx-0'>
+
+          <input type="text" placeholder='Search For Cities' className='w-full rounded-xl lg:w-2/3 bg-secondary px-2 py-3 text-gray-200 '/>
+
+          <div className='w-full overflow-x-hidden lg:min-h-0 lg:flex-1'>
+
+            <Outlet />
+            
+          </div>
+        </div>
       </div>
     </div>
   )

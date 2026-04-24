@@ -20,20 +20,20 @@ const [toggle, setToggle] = React.useState(true)
             {
 
                 toggle ? (
-                    <div className='px-6 pt-6 xl:px-10'>
-                        <div className='flex items-start justify-between gap-6'>
-                            <div className='flex flex-col gap-6'>
+                    <div className='px-5 ml-5 xl:px-8'>
+                        <div className='flex items-start justify-between gap-5'>
+                            <div className='flex flex-col gap-5'>
                                 <div className='flex flex-col gap-2'>
                                     <h1 className='text-4xl font-bold xl:text-[2.65rem]'>Kabul</h1>
                                     <p className='text-sm text-gray-400 xl:text-base'>Humidity: 50%</p>
                                 </div>
                                 <div>
-                                    <h1 className='text-5xl font-bold xl:text-[3.5rem]'>20°C</h1>
+                                    <h1 className='text-5xl font-bold xl:text-[3.5rem]'>20°</h1>
                                 </div>
                             </div>
 
                             <div className='flex shrink-0 items-start justify-center pt-1'>
-                                <img src={sun} alt="sun" className='h-auto w-32 xl:w-36' />
+                                <img src={sun} alt="sun" className='h-auto w-auto xl:w-36 mr-10' />
                             </div>
                         </div>
                     </div>

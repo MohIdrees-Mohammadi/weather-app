@@ -41,7 +41,7 @@ const seeMore = [
         id: 5,
         icon: <FaThermometerQuarter className='text-3xl' />,
         Title: "Feels Like",
-        Value: "25°"
+        Value: "25Â°"
     },
     {
         id: 6,
@@ -71,15 +71,12 @@ const PcWeather = () => {
     }
 
     return (
-        <section className='ml-5 space-y-3 pr-3 pb-4'>
-            {/* top */}
+        <section className='flex min-w-0 flex-col gap-3 pb-4 lg:h-full lg:justify-evenly lg:pb-0'>
             <PcWeatherTop />
 
-            {/* middle */}
             {toggle && <PcWeatherMiddle />}
 
-            {/* down */}
-            <section>
+            <section className='min-w-0'>
                 {toggle ? (
                     <div className='main3 flex w-full flex-col gap-3 rounded-4xl bg-secondary p-4'>
                         <div className='flex items-center justify-between h-auto'>
@@ -90,15 +87,15 @@ const PcWeather = () => {
                         </div>
 
                         <div className='flex justify-between gap-5'>
-                            <div className='flex w-[48%] flex-col gap-2'>
+                            <div className='flex w-1/2 flex-col gap-2'>
                                 <div className='flex items-center gap-2 text-gray-400'>
                                     <BsThermometerSun className='text-xl' />
                                     <h3 className='text-base xl:text-lg'>Real Feel</h3>
                                 </div>
-                                <h2 className='pl-8 text-lg font-bold text-gray-300 xl:text-xl'>25°</h2>
+                                <h2 className='pl-8 text-lg font-bold text-gray-300 xl:text-xl'>25Â°</h2>
                             </div>
 
-                            <div className='flex w-[48%] flex-col gap-2'>
+                            <div className='flex w-1/2 flex-col gap-2'>
                                 <div className='flex items-center gap-2 text-gray-400'>
                                     <LuWind className='text-xl' />
                                     <h3 className='text-base xl:text-lg'>Wind</h3>
@@ -108,7 +105,7 @@ const PcWeather = () => {
                         </div>
 
                         <div className='flex justify-between gap-5'>
-                            <div className='flex w-[48%] flex-col gap-2'>
+                            <div className='flex w-1/2 flex-col gap-2'>
                                 <div className='flex items-center gap-2 text-gray-400'>
                                     <WiHumidity className='text-xl' />
                                     <h3 className='text-base xl:text-lg'>Humidity</h3>
@@ -116,7 +113,7 @@ const PcWeather = () => {
                                 <h2 className='pl-8 text-lg font-bold text-gray-300 xl:text-xl'>25%</h2>
                             </div>
 
-                            <div className='flex w-[48%] flex-col gap-2'>
+                            <div className='flex w-1/2 flex-col gap-2'>
                                 <div className='flex items-center gap-2 text-gray-400'>
                                     <TbUvIndex className='text-xl' />
                                     <h3 className='text-base xl:text-lg'>UV Index</h3>
@@ -126,8 +123,8 @@ const PcWeather = () => {
                         </div>
                     </div>
                 ) : (
-                    <div onClick={handleToggle} className='grid cursor-pointer gap-5 md:grid-cols-2'>
-                        {seeMore.map((item) => ( 
+                    <div onClick={handleToggle} className='grid cursor-pointer gap-4 md:grid-cols-2'>
+                        {seeMore.map((item) => (
                             <div key={item.id} className='rounded-2xl bg-secondary p-6 text-left xl:p-3'>
                                 <div className='flex items-center gap-3 text-gray-400'>
                                     {item.icon}

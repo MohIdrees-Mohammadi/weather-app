@@ -54,12 +54,12 @@ const prediction = [
 
 ]
 
-const sevenforecast = () => {
+const Sevenforecast = () => {
     return (
-        <section className='flex  lg:w-[32%]  '>
-            <div className='ml-6  bg-secondary lg:my-auto lg:ml-0 text-gray-400 rounded-2xl hidden lg:h-[86.5vh] lg:w-full p-4 gap-2.5 lg:block'>
+        <section className='hidden min-w-0 lg:flex lg:h-full lg:w-1/3'>
+            <div className='flex h-full w-full flex-col rounded-2xl bg-secondary p-4 text-gray-400'>
                 <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
-                <div className='grid grid-row-7 h-full'>
+                <div className='grid flex-1 grid-rows-7'>
                     {
                         prediction.map((day, index) => {
                             return (
@@ -81,4 +81,4 @@ const sevenforecast = () => {
     )
 }
 
-export default sevenforecast
+export default Sevenforecast
