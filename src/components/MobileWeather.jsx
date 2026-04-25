@@ -5,6 +5,58 @@ import { WiHumidity } from "react-icons/wi";
 import { TbUvIndex } from "react-icons/tb";
 import sun from "../assets/sunny.png"
 import cloudy from "../assets/cloudy.png"
+const prediction = [
+    {
+        day: "Saturday",
+        weather: "sunny",
+        icon: sun,
+        temp: '20°'
+
+    },
+    {
+        day: "Sunday",
+        weather: "sunny",
+        icon: sun,
+        temp: '30°'
+
+    },
+    {
+        day: "Monday",
+        weather: "sunny",
+        icon: sun,
+        temp: '20°'
+
+    },
+    {
+        day: "Tuesday",
+        weather: "sunny",
+        icon: sun,
+        temp: '20°'
+
+    },
+    {
+        day: "wednesday",
+        weather: "sunny",
+        icon: sun,
+        temp: '20°'
+
+    },
+    {
+        day: "Tursday",
+        weather: "sunny",
+        icon: sun,
+        temp: '20°'
+
+    },
+    {
+        day: "Friday",
+        weather: "sunny",
+        icon: sun,
+        temp: '20°'
+
+    },
+
+]
 
 const weatherDetail = [
     {
@@ -63,70 +115,23 @@ const MobileWeather = () => {
             {/* Wasi */}
             <div className='mt-3 w-full max-w-md rounded-2xl bg-secondary p-4 text-gray-400'>
                 <h2 className='text-sm font-semibold'>7-DAY FORECAST</h2>
-
                 <div className='mt-3 grid grid-rows-7'>
-                    <div className='grid grid-cols-3 items-center gap-2 border-b border-gray-500/30 py-3 text-sm'>
-                        <span className='justify-self-start'>Saturday</span>
-                        <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
-                            <img src={sun} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
-                            <span className='font-bold text-gray-300'>Sunny</span>
-                        </div>
-                        <span className='justify-self-end text-right text-gray-300'>20{"\u00B0"}</span>
-                    </div>
+                    {
+                        prediction.map((id) => {
+                            const { day, weather, icon, temp } = id;
+                            return (
+                                <div key={day} className='grid grid-cols-3 items-center gap-2 border-b border-gray-500/30 py-3 text-sm'>
+                                    <span className='justify-self-start'>{day}</span>
+                                    <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
+                                        <img src={icon} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
+                                        <span className='font-bold text-gray-300'>{weather}</span>
+                                    </div>
+                                    <span className='justify-self-end text-right text-gray-300'>{temp}</span>
+                                </div>
+                            )
+                        })
+                    }
 
-                    <div className='grid grid-cols-3 items-center gap-2 border-b border-gray-500/30 py-3 text-sm'>
-                        <span className='justify-self-start'>Sunday</span>
-                        <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
-                            <img src={sun} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
-                            <span className='font-bold text-gray-300'>Sunny</span>
-                        </div>
-                        <span className='justify-self-end text-right text-gray-300'>20{"\u00B0"}</span>
-                    </div>
-
-                    <div className='grid grid-cols-3 items-center gap-2 border-b border-gray-500/30 py-3 text-sm'>
-                        <span className='justify-self-start'>Monday</span>
-                        <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
-                            <img src={sun} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
-                            <span className='font-bold text-gray-300'>Sunny</span>
-                        </div>
-                        <span className='justify-self-end text-right text-gray-300'>20{"\u00B0"}</span>
-                    </div>
-
-                    <div className='grid grid-cols-3 items-center gap-2 border-b border-gray-500/30 py-3 text-sm'>
-                        <span className='justify-self-start'>Tuesday</span>
-                        <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
-                            <img src={sun} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
-                            <span className='font-bold text-gray-300'>Sunny</span>
-                        </div>
-                        <span className='justify-self-end text-right text-gray-300'>20{"\u00B0"}</span>
-                    </div>
-
-                    <div className='grid grid-cols-3 items-center gap-2 border-b border-gray-500/30 py-3 text-sm'>
-                        <span className='justify-self-start'>Wednsday</span>
-                        <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
-                            <img src={sun} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
-                            <span className='font-bold text-gray-300'>Sunny</span>
-                        </div>
-                        <span className='justify-self-end text-right text-gray-300'>20{"\u00B0"}</span>
-                    </div>
-
-                    <div className='grid grid-cols-3 items-center gap-2 border-b border-gray-500/30 py-3 text-sm'>
-                        <span className='justify-self-start'>Tursday</span>
-                        <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
-                            <img src={sun} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
-                            <span className='font-bold text-gray-300'>Sunny</span>
-                        </div>
-                        <span className='justify-self-end text-right text-gray-300'>20{"\u00B0"}</span>
-                    </div>
-
-                    <div className='grid grid-cols-3 items-center gap-2 py-3 text-sm'>
-                        <span className='justify-self-start'>Friday</span>
-                        <div className='flex items-center justify-center gap-2 justify-self-center text-center'>
-                            <img src={sun} alt='weather image' className='h-8 w-8 sm:h-9 sm:w-9' />
-                            <span className='font-bold text-gray-300'>Sunny</span>
-                        </div>
-                        <span className='justify-self-end text-right text-gray-300'>20{"\u00B0"}</span>
-                    </div>
                 </div>
             </div>
 
