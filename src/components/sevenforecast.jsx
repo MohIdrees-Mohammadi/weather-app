@@ -1,6 +1,6 @@
 import React from 'react'
 const sun = 'https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png'
-
+import TodayShortForcast from "../components/TodayShortForcast"
 const prediction = [
   {
     day: "Saturday",
@@ -54,29 +54,56 @@ const prediction = [
 
 ]
 
-const Sevenforecast = () => {
+const Sevenforecast = ({ toggle, setToggle }) => {
+  console.log(toggle);
   return (
     <section className='hidden min-w-0 lg:flex lg:h-full lg:w-1/3'>
-      <div className='flex h-full px-[8%] pt-[8%] w-full flex-col rounded-2xl bg-secondary p-2 text-gray-400'>
-        <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
-        <div className='grid flex-1 grid-rows-7'>
-          {
-            prediction.map(({ day, icon, temp, weather }) => {
-              return (
-                <div key={day} className='grid grid-cols-3 w-full items-center justify-center border-b last:border-none border-gray-500/30 '>
-                  <span>{day}</span>
-                  <div className='flex gap-3 items-center justify-center'>
-                    <img src={icon} alt='weather image' className=' md:h-auto md:w-10.5 lg:w-[45%] lg:h-auto fill-yellow-300' />
-                    <span className='font-bold'>{weather}</span>
+      {
+        toggle ? (<div className='flex h-full px-[8%] pt-[8%] w-full flex-col rounded-2xl bg-secondary p-2 text-gray-400'>
+          <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
+          <div className='grid flex-1 grid-rows-7'>
+            {
+              prediction.map(({ day, icon, temp, weather }) => {
+                return (
+                  <div key={day} className='grid grid-cols-3 w-full items-center justify-center border-b last:border-none border-gray-500/30 '>
+                    <span>{day}</span>
+                    <div className='flex gap-3 items-center justify-center'>
+                      <img src={icon} alt='weather image' className=' md:h-auto md:w-10.5 lg:w-[45%] lg:h-auto fill-yellow-300' />
+                      <span className='font-bold'>{weather}</span>
+                    </div>
+                    <span className='text-right'>{temp}</span>
                   </div>
-                  <span className='text-right'>{temp}</span>
-                </div>
-              )
-            })
-          }
-        </div>
+                )
+              })
+            }
+          </div>
 
-      </div>
+        </div>) : (
+          <section>
+            <TodayShortForcast />
+            <div className='flex h-full px-[8%] pt-[8%] w-full flex-col rounded-2xl bg-secondary p-2 text-gray-400'>
+            <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
+            <div className='grid flex-1 grid-rows-7'>
+              {
+                prediction.map(({ day, icon, temp, weather }) => {
+                  return (
+                    <div key={day} className='grid grid-cols-3 w-full items-center justify-center border-b last:border-none border-gray-500/30 '>
+                      <span>{day}</span>
+                      <div className='flex gap-3 items-center justify-center'>
+                        <img src={icon} alt='weather image' className=' md:h-auto md:w-10.5 lg:w-[45%] lg:h-auto fill-yellow-300' />
+                        <span className='font-bold'>{weather}</span>
+                      </div>
+                      <span className='text-right'>{temp}</span>
+                    </div>
+                  )
+                })
+              }
+            </div>
+
+          </div>
+            </section>
+        )
+      }
     </section>
   )
 }

@@ -8,17 +8,18 @@ const cloudy = 'https://assets.api.uizard.io/api/cdn/stream/2c926953-f968-411a-a
 const rainy = 'https://assets.api.uizard.io/api/cdn/stream/d12bc406-1c84-42b5-9f37-4d52460d0521.png'
 
 const CurrentWeather = () => {
+  const [toggle, setToggle] = React.useState(true)
   return (
     <section className='w-full bg-primary pb-30 text-gray-300 lg:flex lg:h-full lg:gap-4 lg:overflow-hidden lg:pb-0'>
       <div className='hidden lg:block lg:w-2/3'>
-        <PcWeather />
+        <PcWeather toggle ={toggle} setToggle={setToggle} />
       </div>
 
       <div className='block lg:hidden'>
         <MobileWeather />
       </div>
 
-      <Sevenforecast />
+      <Sevenforecast toggle ={toggle} setToggle={setToggle} />
     </section>
   )
 }
