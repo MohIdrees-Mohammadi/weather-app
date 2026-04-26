@@ -1,7 +1,8 @@
 import React from 'react'
-import PcWeather from '../components/PcWeather'
-import MobileWeather from '../components/MobileWeather'
 import Sevenforecast from '../components/sevenforecast'
+import PcWeatherMiddle from '../components/HourlyPrediction'
+import PcWeatherTop from '../components/PcWeatherTop'
+import PCBottomCard from '../components/AirConditions'
 const sun = 'https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png'
 const semicloudy = 'https://assets.api.uizard.io/api/cdn/stream/634b1d13-e2b4-4766-9bb1-0397c173c222.png'
 const cloudy = 'https://assets.api.uizard.io/api/cdn/stream/2c926953-f968-411a-af55-893c6c0d8901.png'
@@ -10,16 +11,20 @@ const rainy = 'https://assets.api.uizard.io/api/cdn/stream/d12bc406-1c84-42b5-9f
 const CurrentWeather = () => {
   const [toggle, setToggle] = React.useState(true)
   return (
-    <section className='w-full bg-primary pb-30 text-gray-300 lg:flex lg:h-full lg:gap-4 lg:overflow-hidden lg:pb-0'>
-      <div className='hidden lg:block lg:w-2/3'>
-        <PcWeather toggle ={toggle} setToggle={setToggle} />
+    <section className=' lg:flex lg:h-[90vh] w-full lg:gap-[0.4%]'>
+
+      <div className='flex flex-col lg:w-[64%] lg:h-full lg:gap-[0.5%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200'>
+        <PcWeatherTop />
+        <PcWeatherMiddle toggle={toggle} setToggle={setToggle} />
+        <div className='lg:hidden items-center justify-center flex w-[93vw]'>
+          <Sevenforecast />
+        </div>
+        <PCBottomCard toggle={toggle} setToggle={setToggle} />
       </div>
 
-      <div className='block lg:hidden'>
-        <MobileWeather />
+      <div className='hidden lg:pb-1 text-white lg:w-[35%] lg:h-full lg:flex lg:items-end-safe '>
+        <Sevenforecast toggle={toggle} setToggle={setToggle} />
       </div>
-
-      <Sevenforecast toggle ={toggle} setToggle={setToggle} />
     </section>
   )
 }

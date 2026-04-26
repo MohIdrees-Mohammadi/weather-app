@@ -8,9 +8,9 @@ import { FaSliders } from "react-icons/fa6";
 const Header = () => {
     return (
         <>
-            <aside className="fixed bottom-0 right-0 left-0 flex lg:fixed lg:h-[98%] lg:top-2 lg:pt-3 lg:rounded-2xl bg-secondary lg:left-3.5 lg:bottom-2 lg:flex-col lg:gap-10 lg:w-17 items-center h-13 bg-darkBlue ">
+             <aside className="fixed bottom-0 right-0 left-0 flex lg:fixed lg:h-[97.8%] lg:top-2 lg:pt-3 lg:rounded-2xl lg:left-3.5 lg:bottom-2 lg:flex-col lg:gap-[8%] lg:w-[5%] items-center h-13 bg-secondary ">
                 <img className=" hidden lg:w-11.5 lg:h-11.5 lg:block  " src="https://assets.api.uizard.io/api/cdn/stream/d0bb0968-406e-4014-b9ab-080788e9d44b.png" alt="" />
-                <ul className="flex lg:flex-col lg:gap-7 w-full items-center  justify-evenly fill-gray-500 text-gray-500">
+                <ul className="flex lg:flex-col h-full lg:gap-[6%] justify-evenly lg:justify-normal w-full items-center fill-gray-500 text-gray-500 " >
                     <li>
                         {/* Weather link */}
                         <NavLink to={"/main"} end >

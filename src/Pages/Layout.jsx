@@ -4,23 +4,13 @@ import Header from '../components/Header'
 
 const Layout = () => {
   return (
-    <div className='min-h-screen bg-primary lg:h-screen lg:overflow-hidden'>
+    <>
       <Header />
-
-      <div className='min-h-screen bg-primary pb-15 pt-3 lg:h-full lg:pl-22 lg:pr-4 lg:pt-2 lg:pb-1'>
-        <div className='mx-5 flex h-full flex-col gap-4 lg:mx-0'>
-          <input
-            type="text"
-            placeholder='Search For Cities'
-            className='w-full rounded-xl bg-secondary px-2 py-3 text-gray-200 lg:w-2/3'
-          />
-
-          <div className='w-full overflow-x-hidden lg:min-h-0 lg:flex-1'>
-            <Outlet />
-          </div>
-        </div>
+      <input type="text" placeholder='search...' className='pl-1 bg-darkBlue border absolute left-5 right-5 top-3 lg:top-2.5 lg:right-[32%] lg:left-[7%] border-gray-300 text-gray-300 rounded-md justify-center p-[1.2vh]' />
+      <div className='lg:pl-[6.5%] pt-[8vh] bg-primary  lg:pt-[10vh]'>
+        <Outlet />
       </div>
-    </div>
+    </>
   )
 }
 

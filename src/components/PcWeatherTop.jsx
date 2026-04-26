@@ -16,34 +16,28 @@ const [toggle, setToggle] = React.useState(true)
     
 
     return (
-        <section>
+        <>
             {
 
                 toggle ? (
-                    <div className='px-5 ml-5 xl:px-8'>
-                        <div className='flex items-start justify-between gap-5'>
-                            <div className='flex flex-col gap-5'>
-                                <div className='flex flex-col gap-2'>
-                                    <h1 className='text-4xl font-bold xl:text-[2.65rem]'>Kabul</h1>
-                                    <p className='text-sm text-gray-400 xl:text-base'>Humidity: 50%</p>
-                                </div>
-                                <div>
-                                    <h1 className='text-5xl font-bold xl:text-[3.5rem]'>20°</h1>
-                                </div>
-                            </div>
-
-                            <div className='flex shrink-0 items-start justify-center pt-1'>
-                                <img src={sun} alt="sun" className='h-auto w-auto xl:w-36 mr-10' />
-                            </div>
+                    <section className='flex flex-col lg:mx-auto lg:flex-row lg:justify-between  lg:h-[34%] items-center lg:w-[96%] '>
+                    <div className='flex flex-col items-center justify-center gap-9  lg:ml-2.5 lg:items-center lg:justify-evenly h-full'>
+                        <div className='flex flex-col items-center justify-center '>
+                            <h1 className='font-bold text-3xl lg:text-4xl'>kabul</h1>
+                            <span className='text-gray-400'>humudity: 20%</span>
                         </div>
+                        <span className='text-5xl lg:text-4xl hidden lg:block font-extrabold font-mono'>20°</span>
                     </div>
+                    <img src={sun} alt='weather image' className=' lg:w-[25%] lg:h-auto h-55 ' />
+                    <span className='text-5xl lg:hidden font-extrabold font-mono'>20°</span>
+                </section>
                 ) : (<h1 onClick={handleToggle}>Detail Section</h1>)
 
 
             }
 
 
-        </section>)
+        </>)
 }
 
 export default PcWeatherTop
