@@ -1,4 +1,4 @@
-import cloud from "../assets/cloud.png"
+import cloud from "../assets/cloud.png" 
 import cloudy from "../assets/cloudy.png"
 import { FaWind } from "react-icons/fa";
 import { FaTemperatureHalf } from "react-icons/fa6";
