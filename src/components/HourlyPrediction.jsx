@@ -1,49 +1,7 @@
 import React from 'react'
-import cloud from "../assets/cloud.png"
-import sun from "../assets/sunny.png"
-import cloudy from "../assets/cloudy.png"
 
-const weatherDetail = [
-    {
-        id: 1,
-        icon: cloudy,
-        temp: "20° ",
-        time: "6:00 AM"
-    },
-    {
-        id: 2,
-        icon: cloudy,
-        temp: "20°",
-        time: "9:00 AM"
-    },
-    {
-        id: 3,
-        icon: cloudy,
-        temp: "21°",
-        time: "12:00 PM"
-    }
-    , {
-        id: 4,
-        icon: sun,
-        temp: "20°",
-        time: "3:00 PM"
+import { weatherDetail } from '../utils/Data'
 
-    },
-    {
-        id: 5,
-        icon: cloud,
-        temp: "18°",
-        time: "6:00 PM"
-
-    },
-    {
-        id: 6,
-        icon: cloud,
-        temp: "18°",
-        time: "9:00 PM"
-
-    }
-]
 const PcWeatherMiddle = () => {
     return (
         <section className='bg-secondary  w-[93%] md:pb-[3.5%] xl:pb-[1.8%]  lg:pl-[2.3%] lg:pt-[1.5%] xl:pt-[1.8%] lg:w-full lg:mx-auto overflow-x-auto shrink-0 lg:flex-nowrap [scrollbar-width:none] text-gray-400 rounded-xl flex flex-col h-50 lg:h-[34%] lg:m-0 p-4  gap-2 lg:gap-1'>
