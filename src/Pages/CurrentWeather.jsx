@@ -11,11 +11,11 @@ const rainy = 'https://assets.api.uizard.io/api/cdn/stream/d12bc406-1c84-42b5-9f
 const CurrentWeather = () => {
   const [toggle, setToggle] = React.useState(true)
   return (
-    <section className=' lg:flex lg:h-[90vh] w-full lg:gap-[0.4%]'>
+    <section className=' lg:flex lg:h-[91vh] w-full lg:gap-[0.4%]'>
 
       <div className='flex flex-col lg:w-[64%] lg:h-full lg:gap-[0.5%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200'>
         <PcWeatherTop />
-        <PcWeatherMiddle toggle={toggle} setToggle={setToggle} />
+        <PcWeatherMiddle toggle={toggle} />
         <div className='lg:hidden items-center justify-center flex w-[93vw]'>
           <Sevenforecast />
         </div>

@@ -68,7 +68,7 @@ export const weatherData = [
     },
     {
         id: 2,
-        icon: cloudy,
+        icon: cloud,
         temp: "20°",
         time: "9:00 AM"
     },
@@ -78,27 +78,7 @@ export const weatherData = [
         temp: "21°",
         time: "12:00 PM"
     }
-    , {
-        id: 4,
-        icon: sun,
-        temp: "20°",
-        time: "3:00 PM"
 
-    },
-    {
-        id: 5,
-        icon: cloud,
-        temp: "18°",
-        time: "6:00 PM"
-
-    },
-    {
-        id: 6,
-        icon: cloud,
-        temp: "18°",
-        time: "9:00 PM"
-
-    }
 ]
 
 
@@ -107,37 +87,37 @@ export const weatherData = [
 export const seeMore = [
     {
         id: 1,
-        icon: <TbUvIndex className='text-3xl' />,
+        icon: <TbUvIndex className='text-[1.5vw]' />,
         Title: "UV Index",
         Value: "3"
     },
     {
         id: 2,
-        icon: <LuWind className='text-3xl' />,
+        icon: <LuWind className='text-[1.5vw]' />,
         Title: "Wind",
         Value: "0.2 km/h"
     },
     {
         id: 3,
-        icon: <WiHumidity className='text-3xl' />,
+        icon: <WiHumidity className='text-[1.5vw]' />,
         Title: "Humidity",
         Value: "50%"
     },
     {
         id: 4,
-        icon: <FaEye className='text-2xl' />,
+        icon: <FaEye className='text-[1.5vw]' />,
         Title: "Visibility",
         Value: "12 km/h"
     },
     {
         id: 5,
-        icon: <FaThermometerQuarter className='text-3xl' />,
+        icon: <FaThermometerQuarter className='text-[1.5vw]' />,
         Title: "Feels Like",
         Value: "25Â°"
     },
     {
         id: 6,
-        icon: <FaDroplet className='text-2xl' />,
+        icon: <FaDroplet className='text-[1.5vw]' />,
         Title: "Chance of Rain",
         Value: "20%"
     },
@@ -149,7 +129,7 @@ export const seeMore = [
     },
     {
         id: 8,
-        icon: <WiSunset className='text-3xl' />,
+        icon: <WiSunset className='text-[1.5vw]' />,
         Title: "Sun set",
         Value: "20:00"
     },

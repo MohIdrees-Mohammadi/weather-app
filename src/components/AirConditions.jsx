@@ -55,15 +55,16 @@ const PCBottomCard = ({ toggle, setToggle }) => {
                     </div>
                 </div>
             ) : (
-                <div onClick={handleToggle} className='grid cursor-pointer gap-4 md:grid-cols-2'>
+                <div onClick={handleToggle} className='grid cursor-pointer gap-[1%] lg:h-[70%] md:grid-cols-2 lg:w-full'>
                     {seeMore.map((item) => (
-                        <div key={item.id} className='rounded-2xl bg-secondary p-6 text-left xl:p-3'>
-                            <div className='flex items-center gap-3 text-gray-400'>
-                                {item.icon}
-                                <h3 className='text-lg font-semibold tracking-wide text-gray-400 xl:text-xl'>{item.Title}</h3>
-                            </div>
+                        <div key={item.id} className='rounded-2xl bg-secondary lg:px-[5%] lg:pt-[5%] lg:gap-[4%]  lg:flex lg:items-start  '>
 
-                            <h2 className='mt-3 pl-11 text-xl font-semibold text-gray-100 xl:text-2xl'>{item.Value}</h2>
+                            {item.icon}
+                            <div className='lg:flex lg:flex-col lg:items-start lg:gap-1 mt-[-0.5%] '>
+                                <h3 className='lg:text-md font-semibold  text-gray-400 xl:text-lg'>{item.Title}</h3>
+                                <h2 className=' lg:text-lg font-semibold text-gray-100 xl:text-xl'>{item.Value}</h2>
+
+                            </div>
                         </div>
                     ))}
                 </div>
