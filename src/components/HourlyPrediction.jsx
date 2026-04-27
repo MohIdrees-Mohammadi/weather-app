@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { weatherDetail } from '../utils/Data'
 
 const PcWeatherMiddle = () => {

@@ -1,7 +1,6 @@
 import React from 'react'
-import cloud from "../assets/cloud.png"
 import sun from "../assets/sunny.png"
-import cloudy from "../assets/cloudy.png"
+
 
 
 

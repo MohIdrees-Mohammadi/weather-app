@@ -1,59 +1,7 @@
 import React from 'react'
-const sun = 'https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png'
 import TodayShortForcast from "../components/TodayShortForcast"
-import cloud from '../assets/cloud.png'
-const prediction = [
-  {
-    day: "Saturday",
-    weather: "sunny",
-    icon: sun,
-    temp: '20°'
+import { prediction } from '../utils/Data';
 
-  },
-  {
-    day: "Sunday",
-    weather: "sunny",
-    icon: cloud,
-    temp: '20°'
-
-  },
-  {
-    day: "Monday",
-    weather: "sunny",
-    icon: sun,
-    temp: '20°'
-
-  },
-  {
-    day: "Tuesday",
-    weather: "sunny",
-    icon: sun,
-    temp: '20°'
-
-  },
-  {
-    day: "wednesday",
-    weather: "sunny",
-    icon: sun,
-    temp: '20°'
-
-  },
-  {
-    day: "Tursday",
-    weather: "sunny",
-    icon: sun,
-    temp: '20°'
-
-  },
-  {
-    day: "Friday",
-    weather: "sunny",
-    icon: sun,
-    temp: '20°'
-
-  },
-
-]
 
 const Sevenforecast = ({ toggle, setToggle }) => {
   console.log(toggle);

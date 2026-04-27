@@ -1,5 +1,4 @@
 import cloud from "../assets/cloud.png"
-import sun from "../assets/sunny.png"
 import cloudy from "../assets/cloudy.png"
 import { FaWind } from "react-icons/fa";
 import { FaTemperatureHalf } from "react-icons/fa6";
@@ -12,8 +11,7 @@ import { FaThermometerQuarter } from "react-icons/fa";
 import { FaDroplet } from "react-icons/fa6";
 import { IoSpeedometerSharp } from "react-icons/io5";
 import { WiSunset } from "react-icons/wi";
-
-
+const sun = 'https://assets.api.uizard.io/api/cdn/stream/e555eccb-fbe4-4a3c-8917-933a41798140.png'
 
 // hourly prediction information
 
@@ -155,4 +153,59 @@ export const seeMore = [
         Title: "Sun set",
         Value: "20:00"
     },
+]
+
+// sevenforecast information
+
+export const prediction = [
+  {
+    day: "Saturday",
+    weather: "sunny",
+    icon: sun,
+    temp: '20°'
+
+  },
+  {
+    day: "Sunday",
+    weather: "sunny",
+    icon: cloud,
+    temp: '20°'
+
+  },
+  {
+    day: "Monday",
+    weather: "sunny",
+    icon: sun,
+    temp: '20°'
+
+  },
+  {
+    day: "Tuesday",
+    weather: "sunny",
+    icon: sun,
+    temp: '20°'
+
+  },
+  {
+    day: "wednesday",
+    weather: "sunny",
+    icon: sun,
+    temp: '20°'
+
+  },
+  {
+    day: "Tursday",
+    weather: "sunny",
+    icon: sun,
+    temp: '20°'
+
+  },
+  {
+    day: "Friday",
+    weather: "sunny",
+    icon: sun,
+    temp: '20°'
+
+  },
+
 ]
