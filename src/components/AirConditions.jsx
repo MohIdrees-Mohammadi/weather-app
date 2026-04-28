@@ -5,7 +5,7 @@ import { FaTemperatureHalf } from "react-icons/fa6";
 import { FaSun } from "react-icons/fa";
 import { FaDroplet } from "react-icons/fa6";
 
-const PCBottomCard = ({ toggle, setToggle }) => {
+const PCBottomCard = ({ toggle, setToggle, weatherData }) => {
 
     const handleToggle = () => {
         setToggle(!toggle)
@@ -41,7 +41,7 @@ const PCBottomCard = ({ toggle, setToggle }) => {
                                 <FaWind />
                                 <div className='flex flex-col gap-1'>
                                     <span>Wind</span>
-                                    <span className='font-semibold lg:text-xl lg:text-gray-300'>3 Km/h</span>
+                                    <span className='font-semibold lg:text-xl lg:text-gray-300'>{weatherData && weatherData.wind.speed} Km/h</span>
                                 </div>
                             </div>
                             <div className='flex gap-2 items-baseline'>
