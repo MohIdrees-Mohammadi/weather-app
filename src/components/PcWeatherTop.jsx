@@ -1,6 +1,17 @@
 import React from 'react'
 import sun from "../assets/sunny.png"
 
+import sunny from "../assets/sunny.png";
+
+
+
+ const weatherConditionCode = {
+        "01d": sunny,
+        
+      }
+
+
+
 const PcWeatherTop = ({ weatherData }) => {
     return (
         <section className='flex flex-col lg:mx-auto lg:flex-row lg:justify-between  lg:h-[34%] items-center lg:w-[96%] '>
@@ -11,7 +22,7 @@ const PcWeatherTop = ({ weatherData }) => {
                 </div>
                 <span className='text-5xl lg:text-4xl hidden lg:block font-extrabold '>{weatherData && Math.round(weatherData.main.temp)}°</span>
             </div>
-            <img src={sun} alt='weather image' className=' lg:w-[25%] lg:h-auto h-55 ' />
+            <img src={weatherData && weatherConditionCode[weatherData.weather[0].icon]} alt='weather image' className=' lg:w-[25%] lg:h-auto h-55 ' />
             <span className='text-5xl lg:hidden font-extrabold font-mono'>{weatherData && weatherData.main.temp}°</span>
         </section>
 
