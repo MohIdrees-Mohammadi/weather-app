@@ -7,6 +7,7 @@ import axios from "axios";
 
 import sunny from "../assets/sunny.png";
 import cloud from "../assets/cloud.png";
+import cloudy from "../assets/cloudy.png";
 
 
 
@@ -52,11 +53,11 @@ const CurrentWeather = () => {
 
 
   return (
-    <section className=" lg:flex lg:h-[91vh] w-full lg:gap-[0.4%]">
-      <div className="flex flex-col lg:w-[64%] lg:h-full lg:gap-[0.5%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200">
+    <section className="flex w-full flex-col gap-6 px-4 pt-4 pb-24 sm:px-5 md:px-6 lg:h-full lg:min-h-0 lg:flex-row lg:gap-5 lg:overflow-hidden lg:px-4 lg:pt-0 lg:pb-3 xl:gap-6 xl:px-5">
+      <div className={`flex flex-col lg:grid lg:w-[63%] lg:h-full lg:min-h-0 gap-6 md:gap-7 lg:gap-3 xl:gap-4 items-center lg:items-stretch text-gray-200 ${toggle ? "lg:[grid-template-rows:minmax(0,1fr)_minmax(0,0.95fr)_minmax(0,1fr)]" : "lg:[grid-template-rows:minmax(0,0.9fr)_minmax(0,1.7fr)]"}`}>
         <PcWeatherTop weatherData={weatherData} code = {conditionCode} />
         <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast}  />
-        <div className="lg:hidden items-center justify-center flex w-[93vw]">
+        <div className="lg:hidden items-center justify-center flex w-full">
           <Sevenforecast />
         </div>
         <PCBottomCard
@@ -66,7 +67,7 @@ const CurrentWeather = () => {
         />
       </div>
 
-      <div className="hidden lg:pb-1 text-white lg:w-[35%] lg:h-full lg:flex lg:items-end-safe ">
+      <div className="hidden text-white lg:w-[36%] lg:h-full lg:min-h-0 lg:flex lg:items-end-safe ">
         <Sevenforecast toggle={toggle} setToggle={setToggle} />
       </div>
     </section>
