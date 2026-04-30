@@ -6,17 +6,9 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <div className='min-h-screen bg-primary pb-16 lg:h-screen lg:min-h-0 lg:overflow-hidden lg:pl-[6.5%] lg:pt-3 lg:pb-0'>
-        <div className='hidden px-4 lg:block xl:px-5'>
-          <div className='flex h-10 w-[63%] items-center rounded-xl bg-secondary px-4 text-gray-300 xl:h-11'>
-            <input
-              type="text" placeholder='Search for Cities' className='h-full w-full bg-transparent text-sm text-gray-300 outline-none placeholder:text-gray-500 xl:text-base'/>
-          </div>
-        </div>
-
-        <div className='lg:h-[calc(100vh-4rem)] lg:min-h-0 lg:pt-2'>
-          <Outlet />
-        </div>
+      <input type="text" placeholder='Search for Cities' className='pl-1 bg-darkBlue border absolute left-5 right-5 top-3 lg:top-2.5 lg:right-[32%] lg:left-[7%] text-gray-300 rounded-md justify-center p-[1.2vh]' />
+      <div className='lg:pl-[6.5%] pt-[8vh] bg-primary  lg:pt-[9vh]'>
+        <Outlet />
       </div>
     </>
   )

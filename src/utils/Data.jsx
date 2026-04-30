@@ -87,49 +87,49 @@ export const weatherData = [
 export const seeMore = [
     {
         id: 1,
-        icon: <TbUvIndex className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <TbUvIndex className='text-[1.5vw]' />,
         Title: "UV Index",
         Value: "3"
     },
     {
         id: 2,
-        icon: <LuWind className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <LuWind className='text-[1.5vw]' />,
         Title: "Wind",
         Value: "0.2 km/h"
     },
     {
         id: 3,
-        icon: <WiHumidity className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <WiHumidity className='text-[1.5vw]' />,
         Title: "Humidity",
         Value: "50%"
     },
     {
         id: 4,
-        icon: <FaEye className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <FaEye className='text-[1.5vw]' />,
         Title: "Visibility",
         Value: "12 km/h"
     },
     {
         id: 5,
-        icon: <FaThermometerQuarter className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <FaThermometerQuarter className='text-[1.5vw]' />,
         Title: "Feels Like",
-        Value: "25°"
+        Value: "25Â°"
     },
     {
         id: 6,
-        icon: <FaDroplet className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <FaDroplet className='text-[1.5vw]' />,
         Title: "Chance of Rain",
         Value: "20%"
     },
     {
         id: 7,
-        icon: <IoSpeedometerSharp className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <IoSpeedometerSharp className='text-2xl' />,
         Title: "Pressure",
         Value: "1012 hPa"
     },
     {
         id: 8,
-        icon: <WiSunset className='text-xl sm:text-2xl lg:text-[1.5vw]' />,
+        icon: <WiSunset className='text-[1.5vw]' />,
         Title: "Sun set",
         Value: "20:00"
     },
