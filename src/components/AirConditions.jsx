@@ -16,7 +16,7 @@ const PCBottomCard = ({ toggle, setToggle, weatherData }) => {
                 <div className='w-full rounded-xl lg:w-full lg:mx-auto h-50 lg:h-full lg:min-h-0 lg:overflow-hidden bg-secondary p-4 sm:p-5 lg:p-5 text-gray-400'>
                     <div className='flex items-center justify-between gap-4'>
                         <h2 className='font-semibold text-xs sm:text-sm xl:text-base'>AIR CONDITIONS </h2>
-                        <button onClick={handleToggle} className='shrink-0 py-1.5 px-3 text-xs sm:text-sm text-gray-100 bg-cyan-600 rounded-md transition hover:bg-cyan-400'>See more</button>
+                        <button onClick={handleToggle} className='shrink-0 py-1.5 px-3 text-xs sm:text-sm text-gray-100 bg-blue-500 rounded-md transition hover:bg-blue-400'>See more</button>
                     </div>
 
                     <div className='grid grid-cols-2 gap-x-4 py-4 items-center text-xs sm:text-sm lg:min-h-0 lg:py-4 lg:items-start lg:h-[calc(100%-2.5rem)] lg:text-base xl:text-lg'>
