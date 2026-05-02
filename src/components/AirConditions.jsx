@@ -13,7 +13,7 @@ const PCBottomCard = ({ toggle, setToggle, weatherData }) => {
     return (
         <>
             {toggle ? (
-                <div className='w-[93%] lg:pl-[2.3%] rounded-xl lg:rounded-3xl lg:w-[96%] lg:mx-auto h-50 lg:h-[31%] lg:pt-[1.8%] bg-secondary p-4 lg:pb-0 lg:pr-[1.5%] text-gray-400'>
+                <div className='w-[93%] lg:pl-[2.3%] rounded-xl lg:rounded-2xl lg:w-[96%] lg:mx-auto h-50 lg:h-[31%] lg:pt-[1.8%] bg-secondary p-4 lg:pb-0 lg:pr-[1.5%] text-gray-400'>
                     <div className='flex items-center justify-between lg:h-[10%]'>
                         <h2 className='font-semibold text-sm  '>AIR CONDITIONS </h2>
                         <button onClick={handleToggle} className='py-0.5 px-1.5 text-gray-100 bg-blue-500 rounded-full'>See more</button>
