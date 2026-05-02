@@ -53,7 +53,7 @@ const CurrentWeather = () => {
 
   return (
     <section className=" lg:flex lg:h-[91vh] w-full lg:gap-[0.4%]">
-      <div className="flex flex-col lg:w-[64%] lg:h-full lg:gap-[0.5%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200">
+      <div className="flex flex-col lg:w-[68%] lg:h-full lg:gap-[1%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200">
         <PcWeatherTop weatherData={weatherData} code = {conditionCode} />
         <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast}  />
         <div className="lg:hidden items-center justify-center flex w-[93vw]">
@@ -66,7 +66,7 @@ const CurrentWeather = () => {
         />
       </div>
 
-      <div className="hidden lg:pb-1 text-white lg:w-[35%] lg:h-full lg:flex lg:items-end-safe ">
+      <div className="hidden lg:pb-1 text-white lg:w-[30%] lg:h-full lg:flex lg:items-end-safe ">
         <Sevenforecast toggle={toggle} setToggle={setToggle} />
       </div>
     </section>
