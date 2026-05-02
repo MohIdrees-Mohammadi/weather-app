@@ -8,7 +8,7 @@ const Sevenforecast = ({ toggle }) => {
   return (
     <>
       {
-        toggle ? (<div className='bg-secondary lg:h-full  w-[93vw] lg:w-[99%] lg:px-[8%] lg:py-[5%] px-[6%] text-gray-400 rounded-2xl flex flex-col h-150 md:w-[93vw] md:h-122 p-4 pb-0 gap-2.5'>
+        toggle ? (<div className='bg-secondary lg:h-[95%]  w-[93vw] lg:w-[99%] mx-auto lg:px-[8%] lg:py-[5%] px-[6%] text-gray-400 rounded-2xl flex flex-col h-150 md:w-[93vw] md:h-122 p-4 pb-0 gap-2.5'>
           <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>
           <div className='grid grid-rows-7 h-full'>
             {
