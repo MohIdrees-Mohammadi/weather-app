@@ -53,7 +53,7 @@ const CurrentWeather = () => {
 
   return (
     <section className=" lg:flex lg:h-[91vh] w-full lg:gap-[0.4%]">
-                  <input type="text" placeholder='Search for Cities' className=' hidden lg:block pl-3 placeholder-gray-200 bg-secondary  absolute left-5 right-5 top-3 lg:top-2.5 lg:right-[35%] lg:left-[7%]  rounded-md justify-center p-[1.2vh] ' />
+        <input type="text" placeholder='Search for Cities' className=' hidden lg:block pl-3 placeholder-gray-200 bg-secondary  absolute left-5 right-5 top-3 lg:top-2.5 lg:right-[30.5%] lg:left-[7%]  rounded-md justify-center p-[1.2vh] ' />
 
       <div className="flex flex-col lg:w-[68%] lg:h-full lg:gap-[1%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200">
         <PcWeatherTop weatherData={weatherData} code = {conditionCode} />
