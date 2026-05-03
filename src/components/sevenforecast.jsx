@@ -23,7 +23,7 @@ const Sevenforecast = ({ toggle, sevendayforecast }) => {
               sevenday.map((data, index ) => {
                 return (
                   <div key={data} className='grid grid-cols-3 w-full items-center justify-center border-b last:border-none border-gray-500/30 '>
-                    <span>{new Intl.DateTimeFormat([],{weekday:'long'}).format(new Date(data))}</span>
+                    <span>{index === 0 ? 'Today':new Intl.DateTimeFormat([],{weekday:'long'}).format(new Date(data))}</span>
                     <div className='flex gap-3 items-center justify-center'>
                       <img src={cloud} alt='weather image' className='w-[45%] h-auto md:h-auto md:w-10.5 lg:w-[45%] lg:h-auto fill-yellow-300' />
                       <span className='font-bold'>cloudy</span>
