@@ -12,13 +12,13 @@ import cloud from "../assets/cloud.png";
 
 
 
-
 const CurrentWeather = () => {
   const [toggle, setToggle] = React.useState(true);
   const [weatherData, setWeatherData] = React.useState(null);
   const [sevenDaysForcast, setSevenDaysForcast] = React.useState(null);
   const [conditionCode, setConditionCode] = React.useState(null);
   const [sevendayforecast, setforecast] = React.useState(null)
+  const [weatherCode, setWeatherCode] = React.useState(null)
 
   const getWeather = async () => {
     try {
@@ -44,6 +44,7 @@ const CurrentWeather = () => {
     const res = await axios.get(url);
     setSevenDaysForcast(res.data.hourly.temperature_2m)
     setforecast(res.data.hourly)
+    setWeatherCode(res.data.hourly.weather_code)
   };
 
 
@@ -59,7 +60,7 @@ const CurrentWeather = () => {
 
       <div className="flex flex-col lg:w-[68%] lg:h-full lg:gap-[1%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200">
         <PcWeatherTop weatherData={weatherData} code = {conditionCode} />
-        <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast}  />
+        <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast} weatherCode={weatherCode} />
         <div className="lg:hidden items-center justify-center flex w-[93vw]">
           <Sevenforecast />
         </div>
