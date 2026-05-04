@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "jetro": {
+      "command": "C:\\Users\\Idree\\.jetro\\runtime\\node-win32-x64.exe",
+      "args": [
+        "C:\\Users\\Idree\\.jetro\\mcp-server\\index.js"
+      ],
+      "env": {
+        "JET_WORKSPACE": "c:\\Users\\Idree\\Desktop\\Project\\weather-app",
+        "JET_API_URL": "https://api.jetro.ai",
+        "PATH": "C:\\Users\\Idree\\.jetro\\runtime;C:\\Users\\Idree\\AppData\\Local\\Programs\\Microsoft VS Code;C:\\Program Files\\Microsoft\\jdk-17.0.18.8-hotspot\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Idree\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\;C:\\Users\\Idree\\AppData\\Local\\Programs\\Python\\Python38\\;C:\\Users\\Idree\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Idree\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Idree\\AppData\\Local\\Programs\\Antigravity\\bin;C:\\Users\\Idree\\AppData\\Roaming\\npm;C:\\Users\\Idree\\AppData\\Local\\PowerToys\\DSCModules\\"
+      }
+    }
+  }
+}

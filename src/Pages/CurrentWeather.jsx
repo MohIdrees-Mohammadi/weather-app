@@ -4,10 +4,9 @@ import PcWeatherMiddle from "../components/HourlyPrediction";
 import PcWeatherTop from "../components/PcWeatherTop";
 import PCBottomCard from "../components/AirConditions";
 import axios from "axios";
-
+import cloudy from '../assets/cloudy.png'
 import sunny from "../assets/sunny.png";
 import cloud from "../assets/cloud.png";
-
 
 
 
@@ -18,6 +17,8 @@ const CurrentWeather = () => {
   const [weatherData, setWeatherData] = React.useState(null);
   const [sevenDaysForcast, setSevenDaysForcast] = React.useState(null);
   const [conditionCode, setConditionCode] = React.useState(null);
+  const [sevendayforecast, setforecast] = React.useState(null)
+  const [weatherCode, setWeatherCode] = React.useState(null)
 
   const getWeather = async () => {
     try {
@@ -42,6 +43,8 @@ const CurrentWeather = () => {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code`;
     const res = await axios.get(url);
     setSevenDaysForcast(res.data.hourly.temperature_2m)
+    setforecast(res.data.hourly)
+    setWeatherCode(res.data.hourly.weather_code)
   };
 
 
@@ -57,7 +60,7 @@ const CurrentWeather = () => {
 
       <div className="flex flex-col lg:w-[68%] lg:h-full lg:gap-[1%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200">
         <PcWeatherTop weatherData={weatherData} code = {conditionCode} />
-        <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast}  />
+        <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast} weatherCode={weatherCode} />
         <div className="lg:hidden items-center justify-center flex w-[93vw]">
           <Sevenforecast />
         </div>
@@ -69,7 +72,7 @@ const CurrentWeather = () => {
       </div>
 
       <div className="hidden lg:pb-1 text-white lg:w-[30%] lg:h-full lg:flex lg:items-end-safe ">
-        <Sevenforecast toggle={toggle} setToggle={setToggle} />
+        <Sevenforecast toggle={toggle} setToggle={setToggle} sevendayforecast={sevendayforecast} />
       </div>
     </section>
   );

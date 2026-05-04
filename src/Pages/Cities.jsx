@@ -9,6 +9,7 @@ import Cloud from "../assets/cloudy.png";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Sevenforecast from "../components/sevenforecast";
+import Overcasting from "../assets/icons/3_Overcast.png"
 
 const cities = [
   {
@@ -45,7 +46,8 @@ function Cities() {
   const [weatherData, setWeatherData] = React.useState(null);
   const [sevenDaysForcast, setSevenDaysForcast] = React.useState(null);
   const [city, setCity] = React.useState(null);
-  // const [conditionCode, setConditionCode] = React.useState(null);
+  
+  const [conditionCode, setConditionCode] = React.useState(null);
 
 
   // this is the forecast of the three hours
@@ -95,13 +97,13 @@ const days = sevenDaysForcast ? [
       setWeatherData(res.data);
       getDetailWeather(res.data.coord.lat, res.data.coord.lon);
 
-      // const weatherConditionCode = {
-      //   "01d": sunny,
-      //   // "02d": cloudy,
-      //   "03d": cloud,
-      // };
+      const weatherConditionCode = {
+        "01d": sunny,
+        "01n": sunny,
+        "03d": cloud,
+      };
 
-      // setConditionCode(weatherConditionCode);
+      setConditionCode(weatherConditionCode);
     } catch (err) {
       console.log(err);
     }
@@ -155,7 +157,7 @@ const days = sevenDaysForcast ? [
             </span>
           </div>
           <img
-            src={Sun}
+            src={weatherData && weatherData.weather[0].icon}
             className="hidden lg:block overflow-hidden text-center size-37.5 lg:text-8xl mt-3.75"
           />
           <div className="flex flex-col justify-center items-center w-full lg:hidden">

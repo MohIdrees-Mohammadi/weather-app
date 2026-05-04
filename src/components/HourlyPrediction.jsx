@@ -1,7 +1,7 @@
 import React from "react";
 import { weatherDetail } from "../utils/Data";
 import TempCard from "./tempCard";
-const PcWeatherMiddle = ({ toggle, hourly }) => {
+const PcWeatherMiddle = ({ toggle, hourly, weatherCode }) => {
     return (
         <>
             {toggle ? (
@@ -11,12 +11,12 @@ const PcWeatherMiddle = ({ toggle, hourly }) => {
                         {
                             hourly && (
                                 <>
-                                <TempCard hourly = {hourly[6]} time ={"6:00 AM"}/>
-                                <TempCard hourly = {hourly[9]} time ={"9:00 AM"}/>
-                                <TempCard hourly = {hourly[12]} time ={"12:00 PM"}/>
-                                <TempCard hourly = {hourly[15]} time ={"3:00 PM"}/>
-                                <TempCard hourly = {hourly[18]} time ={"6:00 PM"}/>
-                                <TempCard hourly = {hourly[21]} time ={"9:00 PM"}/>
+                                <TempCard hourly = {hourly[6]} time ={"6:00 AM"} icon={weatherCode[6]}/>
+                                <TempCard hourly = {hourly[9]} time ={"9:00 AM"} icon={weatherCode[9]}/>
+                                <TempCard hourly = {hourly[12]} time ={"12:00 PM"} icon={weatherCode[12]}/>
+                                <TempCard hourly = {hourly[15]} time ={"3:00 PM"} icon={weatherCode[15]}/>
+                                <TempCard hourly = {hourly[18]} time ={"6:00 PM"} icon={weatherCode[18]}/>
+                                <TempCard hourly = {hourly[21]} time ={"9:00 PM"} icon={weatherCode[21]}/>
                                 </>
                             )
 
