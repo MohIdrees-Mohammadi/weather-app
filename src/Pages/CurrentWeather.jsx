@@ -12,13 +12,14 @@ import cloud from "../assets/cloud.png";
 
 
 
-
 const CurrentWeather = () => {
   const [toggle, setToggle] = React.useState(true);
   const [weatherData, setWeatherData] = React.useState(null);
   const [sevenDaysForcast, setSevenDaysForcast] = React.useState(null);
   const [conditionCode, setConditionCode] = React.useState(null);
   const [sevendayforecast, setforecast] = React.useState(null)
+  const [weatherCode, setWeatherCode] = React.useState(null)
+  const [detailWeather, setDetailWeather] = React.useState(null)
 
   const getWeather = async () => {
     try {
@@ -40,10 +41,12 @@ const CurrentWeather = () => {
     }
   };
   const getDetailWeather = async (lat, lon) => {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&timezone=auto&current=temperature_2m,relative_humidity_2m,apparent_temperature,wind_speed_10m,pressure_msl&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code,visibility&daily=sunset,uv_index_max,precipitation_probability_max`;
     const res = await axios.get(url);
+    setDetailWeather(res.data)
     setSevenDaysForcast(res.data.hourly.temperature_2m)
     setforecast(res.data.hourly)
+    setWeatherCode(res.data.hourly.weather_code)
   };
 
 
@@ -59,7 +62,7 @@ const CurrentWeather = () => {
 
       <div className="flex flex-col lg:w-[68%] lg:h-full lg:gap-[1%] gap-5 pb-20 lg:pb-1 items-center lg:items-start text-gray-200">
         <PcWeatherTop weatherData={weatherData} code = {conditionCode} />
-        <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast}  />
+        <PcWeatherMiddle toggle={toggle} hourly={sevenDaysForcast} weatherCode={weatherCode} />
         <div className="lg:hidden items-center justify-center flex w-[93vw]">
           <Sevenforecast />
         </div>
@@ -67,6 +70,7 @@ const CurrentWeather = () => {
           toggle={toggle}
           setToggle={setToggle}
           weatherData={weatherData}
+          detailWeather={detailWeather}
         />
       </div>
 
