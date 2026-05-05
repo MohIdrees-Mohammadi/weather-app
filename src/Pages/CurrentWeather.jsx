@@ -75,7 +75,7 @@ const CurrentWeather = () => {
       </div>
 
       <div className="hidden lg:pb-1 text-white lg:w-[30%] lg:h-full lg:flex lg:items-end-safe ">
-        <Sevenforecast toggle={toggle} setToggle={setToggle} sevendayforecast={sevendayforecast} />
+        <Sevenforecast toggle={toggle} weatherCode={weatherCode} sevendayforecast={sevendayforecast} />
       </div>
     </section>
   );
