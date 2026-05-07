@@ -45,7 +45,7 @@ const CurrentWeather = () => {
     const res = await axios.get(url);
     setDetailWeather(res.data)
     setSevenDaysForcast(res.data.hourly.temperature_2m)
-    setforecast(res.data.hourly)
+    setforecast(res?.data?.hourly)
     setWeatherCode(res.data.hourly.weather_code)
   };
 
@@ -75,7 +75,8 @@ const CurrentWeather = () => {
       </div>
 
       <div className="hidden lg:pb-1 text-white lg:w-[30%] lg:h-full lg:flex lg:items-end-safe ">
-        <Sevenforecast toggle={toggle} weatherCode={weatherCode} sevendayforecast={sevendayforecast} />
+        <Sevenforecast toggle={toggle} sevenDaysForcast={sevenDaysForcast} weatherCode={weatherCode} sevendayforecast={sevendayforecast} />
+        
       </div>
     </section>
   );

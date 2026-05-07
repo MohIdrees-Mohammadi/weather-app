@@ -1,0 +1,117 @@
+[33mcommit fc1968648c5d07f5e5311ec587c80d05d3d6a95e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Abdul Wasi <abdulwasishirzai567@gmail.com>
+Date:   Tue May 5 10:21:04 2026 +0430
+
+    changes in the 7 weather
+
+[1mdiff --git a/src/Pages/CurrentWeather.jsx b/src/Pages/CurrentWeather.jsx[m
+[1mindex 3741bc8..0eca555 100644[m
+[1m--- a/src/Pages/CurrentWeather.jsx[m
+[1m+++ b/src/Pages/CurrentWeather.jsx[m
+[36m@@ -75,7 +75,7 @@[m [mconst CurrentWeather = () => {[m
+       </div>[m
+ [m
+       <div className="hidden lg:pb-1 text-white lg:w-[30%] lg:h-full lg:flex lg:items-end-safe ">[m
+[31m-        <Sevenforecast toggle={toggle} setToggle={setToggle} sevendayforecast={sevendayforecast} />[m
+[32m+[m[32m        <Sevenforecast toggle={toggle} weatherCode={weatherCode} sevendayforecast={sevendayforecast} />[m
+       </div>[m
+     </section>[m
+   );[m
+[1mdiff --git a/src/components/AirConditions.jsx b/src/components/AirConditions.jsx[m
+[1mindex cf9691a..3a12aab 100644[m
+[1m--- a/src/components/AirConditions.jsx[m
+[1m+++ b/src/components/AirConditions.jsx[m
+[36m@@ -39,7 +39,7 @@[m [mconst PCBottomCard = ({ toggle, setToggle, weatherData, detailWeather }) => {[m
+     return ([m
+         <>[m
+             {toggle ? ([m
+[31m-                <div className='w-[93%] lg:pl-[2.3%] rounded-xl lg:rounded-2xl lg:w-[96%] lg:mx-auto h-50 lg:h-[31%] lg:pt-[1.8%] bg-secondary p-4 lg:pb-0 lg:pr-[1.5%] text-gray-400'>[m
+[32m+[m[32m                <div className='w-[93%] lg:pl-[2.3%] rounded-xl lg:rounded-2xl lg:w-[99%] lg:mx-auto h-50 lg:h-[31%] lg:pt-[1.8%] bg-secondary p-4 lg:pb-0 lg:pr-[1.5%] text-gray-400'>[m
+                     <div className='flex items-center justify-between lg:h-[10%]'>[m
+                         <h2 className='font-semibold text-sm'>AIR CONDITIONS </h2>[m
+                         <button onClick={handleToggle} className='py-0.5 px-1.5 text-gray-100 lg:py-0.7 lg:px-2 lg:text-md xl:text-sm bg-cyan-500 rounded-full'>See more</button>[m
+[1mdiff --git a/src/components/HourlyPrediction.jsx b/src/components/HourlyPrediction.jsx[m
+[1mindex a6efe8a..ad05aec 100644[m
+[1m--- a/src/components/HourlyPrediction.jsx[m
+[1m+++ b/src/components/HourlyPrediction.jsx[m
+[36m@@ -5,7 +5,7 @@[m [mconst PcWeatherMiddle = ({ toggle, hourly, weatherCode }) => {[m
+     return ([m
+         <>[m
+             {toggle ? ([m
+[31m-                <section className="bg-secondary  w-[93%] md:pb-[3.5%] xl:pb-[1.8%]  lg:pl-[2.3%] lg:pt-[1.5%] xl:pt-[1.8%] lg:w-[96%] lg:mx-auto overflow-x-auto shrink-0 lg:flex-nowrap [scrollbar-width:none] text-gray-400 rounded-xl lg:rounded-2xl flex flex-col h-50 lg:h-[33%] lg:m-0 p-4  gap-2 lg:gap-1">[m
+[32m+[m[32m                <section className="bg-secondary  w-[93%] md:pb-[3.5%] xl:pb-[1.8%]  lg:pl-[2.3%] lg:pt-[1.5%] xl:pt-[1.8%] lg:w-[99%] lg:mx-auto overflow-x-auto shrink-0 lg:flex-nowrap [scrollbar-width:none] text-gray-400 rounded-xl lg:rounded-2xl flex flex-col h-50 lg:h-[33%] lg:m-0 p-4  gap-2 lg:gap-1">[m
+                     <h2 className="text-sm font-semibold">TODAY'S FORECAST</h2>[m
+                     <div className="flex font-semibold flex-nowrap sm:justify-between lg:grid lg:grid-cols-6 w-full h-full lg:h-[80%]  xl:my-auto ">[m
+                         {[m
+[1mdiff --git a/src/components/PcWeatherTop.jsx b/src/components/PcWeatherTop.jsx[m
+[1mindex 7827b18..1e6619b 100644[m
+[1m--- a/src/components/PcWeatherTop.jsx[m
+[1m+++ b/src/components/PcWeatherTop.jsx[m
+[36m@@ -33,10 +33,10 @@[m [mconst PcWeatherTop = ({ weatherData }) => {[m
+         <section className='flex flex-col lg:mx-auto lg:flex-row lg:justify-between lg:pr-10 lg:h-[34%] items-center lg:w-[96%] '>[m
+             <div className='flex flex-col items-center justify-center gap-9  lg:ml-2.5 lg:items-start lg:justify-evenly h-full'>[m
+                 <div className='flex flex-col lg:items-start items-center justify-center lg:gap-2 xl:gap-3 '>[m
+[31m-                    <h1 className='font-bold text-3xl lg:text-2xl xl:text-3xl'>{weatherData && weatherData.name}</h1>[m
+[32m+[m[32m                    <h1 className='font-bold text-3xl lg:text-3xl xl:text-4xl'>{weatherData && weatherData.name}</h1>[m
+                     <span className='text-gray-400 ml-1 '>humidity: {weatherData && weatherData.main.humidity}</span>[m
+                 </div>[m
+[31m-                <span className='text-5xl lg:text-2xl xl:text-3xl hidden lg:block font-extrabold '>{weatherData && Math.round(weatherData.main.temp)}°</span>[m
+[32m+[m[32m                <span className='text-5xl lg:text-4xl xl:text-5xl hidden lg:block font-extrabold '>{weatherData && Math.round(weatherData.main.temp)}°</span>[m
+             </div>[m
+             <img src={weatherData && weatherConditionCode[weatherData.weather[0].icon]} alt='weather image' className=' lg:w-[24%] lg:h-auto h-55 ' />[m
+             <span className='text-5xl lg:hidden font-extrabold font-mono'>{weatherData && weatherData.main.temp}°</span>[m
+[1mdiff --git a/src/components/sevenforecast.jsx b/src/components/sevenforecast.jsx[m
+[1mindex 1e7779a..2241c18 100644[m
+[1m--- a/src/components/sevenforecast.jsx[m
+[1m+++ b/src/components/sevenforecast.jsx[m
+[36m@@ -1,65 +1,95 @@[m
+[31m-import React from 'react'[m
+[31m-import TodayShortForcast from "../components/TodayShortForcast"[m
+[31m-import { prediction } from '../utils/Data';[m
+[31m-import cloud from '../assets/cloud.png'[m
+[32m+[m[32mimport React from "react";[m
+[32m+[m[32mimport TodayShortForcast from "../components/TodayShortForcast";[m
+[32m+[m[32mimport { prediction } from "../utils/Data";[m
+[32m+[m[32mimport cloud from "../assets/cloud.png";[m
+[32m+[m[32mimport { iconCodes } from "../assets/icons/iconCode";[m
+ [m
+[31m-[m
+[31m-const Sevenforecast = ({ toggle, sevendayforecast }) => {[m
+[32m+[m[32mconst Sevenforecast = ({ toggle, sevendayforecast, weatherCode }) => {[m
+[32m+[m[32m  if (!sevendayforecast || !sevendayforecast.temperature_2m || !weatherCode) {[m
+[32m+[m[32m    return <div>loading</div>;[m
+[32m+[m[32m  }[m
+   [m
+[32m+[m[32m  const dayindices = [0,1,2,3,4,5,6][m
+[32m+[m[32m    const sevenday = dayindices.map([m
+[32m+[m[32m    (index) => sevendayforecast?.time[index * 24],[m
+[32m+[m[32m  );[m
+[32m+[m[32m  const seventemp = dayindices.map((index) => {[m
+[32m+[m[32m    const dayblock = sevendayforecast.temperature_2m.slice([m
+[32m+[m[32m      index * 24,[m
+[32m+[m[32m      (index + 1) * 24,[m
+[32m+[m[32m    );[m
+[32m+[m[32m    const sum = dayblock.reduce((temp, acc) => temp + acc, 0);[m
+[32m+[m[32m    return (sum/24).toFixed(1)[m
+[32m+[m[32m  });[m
+[32m+[m
+ [m
+[31m-  if(!sevendayforecast || !sevendayforecast.temperature_2m){[m
+[31m-    return <div>loading</div>[m
+[31m-  }[m
+[31m-  const dayindices = [8,32,56,80,104,128,152][m
+[31m-  const sevenday =dayindices.map((index)=> sevendayforecast?.time[index])[m
+[31m-  const sevendaytemp = dayindices.map((index)=> sevendayforecast?.temperature_2m[index])[m
+   return ([m
+     <>[m
+[31m-      {[m
+[31m-        toggle ? (<div className='bg-secondary lg:h-[95%]  w-[93vw] lg:w-[99%] mx-auto lg:px-[8%] lg:py-[5%] px-[6%] text-gray-400 rounded-2xl flex flex-col h-150 md:w-[93vw] md:h-122 p-4 pb-0 gap-2.5'>[m
+[31m-          <h2 className='font-semibold text-sm'>7-DAY FORECAST</h2>[m
+[31m-          <div className='grid grid-rows-7 h-full'>[m
+[31m-            {[m
+[31m-              sevenday.map((data, index ) => {[m
+[31m-                return ([m
+[31m-                  <div key={data} className='grid grid-cols-3 w-full items-center justify-center border-b last:border-none border-gray-500/30 '>[m
+[31m-                    <span>{index === 0 ? 'Today':new Intl.DateTimeFormat([],{weekday:'long'}).format(new Date(data))}</span>[m
+[31m-                    <div className='flex gap-3 items-center justify-center'>[m
+[31m-                      <img src={cloud} alt='weather image' className='w-[45%] h-auto md:h-auto md:w-10.5 lg:w-[
