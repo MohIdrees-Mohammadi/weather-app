@@ -5,7 +5,7 @@ import { iconCodes } from "../assets/icons/iconCode";
 const TodayShortForcast = ({ hourly }) => {
   if (!hourly) {
     return (
-      <div className="mt-3 lg:mt-0 hidden lg:flex lg:h-[32%] lg:w-full rounded-2xl bg-secondary p-4 text-gray-400">
+      <div className="mt-3 lg:mt-0  lg:flex lg:h-[32%] lg:w-full rounded-2xl bg-secondary p-4 text-gray-400">
         loading
       </div>
     );

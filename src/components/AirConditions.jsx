@@ -39,7 +39,7 @@ const PCBottomCard = ({ toggle, setToggle, weatherData, detailWeather }) => {
     return (
         <>
             {toggle ? (
-                <div className='w-[93%] lg:pl-[2.3%] rounded-xl lg:rounded-2xl lg:w-[99%] lg:mx-auto h-50 lg:h-[31%] lg:pt-[1.8%] bg-secondary p-4 lg:pb-0 lg:pr-[1.5%] text-gray-400'>
+                <div className='w-[93%] lg:pl-[2.3%] rounded-xl lg:rounded-2xl lg:w-[99%] lg:mx-auto h-50 lg:h-[32%] lg:pt-[1.8%] bg-secondary p-4 lg:pb-0 lg:pr-[1.5%] text-gray-400'>
                     <div className='flex items-center justify-between lg:h-[10%]'>
                         <h2 className='font-semibold text-sm'>AIR CONDITIONS </h2>
                         <button onClick={handleToggle} className='py-0.5 px-1.5 text-gray-100 lg:py-0.7 lg:px-2 lg:text-md xl:text-sm bg-cyan-500 rounded-full'>See more</button>
@@ -81,15 +81,15 @@ const PCBottomCard = ({ toggle, setToggle, weatherData, detailWeather }) => {
                     </div>
                 </div>
             ) : (
-                <div onClick={handleToggle} className='grid cursor-pointer gap-3 lg:h-[70%] md:grid-cols-2 lg:w-full'>
+                <div onClick={handleToggle} className='grid w-[92vw] h-200 bg-primary cursor-pointer gap-0.5 lg:h-[65%] xl:h-[70%] md:grid-cols-2 lg:w-full '>
                     {seeMore.map((item) => (
-                        <div key={item.id} className='rounded-2xl bg-secondary px-4 py-4 lg:px-[7%] lg:py-[8%] flex items-start gap-3 min-h-24'>
-                            <div className='shrink-0 pt-1'>
+                        <div key={item.id} className='rounded-2xl mx-auto bg-secondary px-4 py-4 lg:px-[8%] lg:py-auto flex items-start justify-start w-[90%] gap-3 h-[95%] xl:h-[97%]'>
+                            <div className='shrink-0 pt-[1.5%]'>
                                 {item.icon}
                             </div>
-                            <div className='flex flex-col items-start gap-1 min-w-0'>
+                            <div className='flex flex-col items-start justify-evenly gap-1 min-w-0 h-full'>
                                 <h3 className='text-sm font-semibold text-gray-400 xl:text-base'>{item.Title}</h3>
-                                <h2 className='text-base font-semibold text-gray-100 xl:text-lg break-words'>{seeMoreValues[item.id]}</h2>
+                                <h2 className='text-sm font-semibold text-gray-100 xl:text-lg break-words'>{seeMoreValues[item.id]}</h2>
                             </div>
                         </div>
                     ))}

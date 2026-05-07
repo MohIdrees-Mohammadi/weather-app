@@ -30,7 +30,7 @@ import sunny from "../assets/sunny.png";
 
 const PcWeatherTop = ({ weatherData }) => {
     return (
-        <section className='flex flex-col lg:mx-auto lg:flex-row lg:justify-between lg:pr-10 lg:h-[34%] items-center lg:w-[96%] '>
+        <section className='flex flex-col lg:mx-auto lg:flex-row lg:justify-between lg:pr-10 lg:h-[33%] items-center lg:w-[96%] '>
             <div className='flex flex-col items-center justify-center gap-9  lg:ml-2.5 lg:items-start lg:justify-evenly h-full'>
                 <div className='flex flex-col lg:items-start items-center justify-center lg:gap-2 xl:gap-3 '>
                     <h1 className='font-bold text-3xl lg:text-3xl xl:text-4xl'>{weatherData && weatherData.name}</h1>

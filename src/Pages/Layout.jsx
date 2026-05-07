@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <div className='lg:pl-[6.5%] pt-[12vh] bg-primary  lg:pt-[9vh]'>
+      <div className='lg:pl-[6.5%] pt-[5vh] bg-primary  lg:pt-[9vh]'>
         <Outlet />
       </div>
     </>
